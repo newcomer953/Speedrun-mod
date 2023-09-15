@@ -1,0 +1,14 @@
+<mod>
+	<hooks script_path="Hooks/">
+		<post script_path="Base.lua" hook_id="lib/managers/localizationmanager"/>
+
+		<group hook_id="lib/managers/" script_path="">
+			<post :hook_id="hudmanagerpd2" :script_path="hud.lua"/>
+			<post :hook_id="hud/hudheisttimer" :script_path="timer.lua"/>
+			<post :hook_id="menumanager" :script_path="restart_timer.lua"/>
+			<post :hook_id="menu/stageendscreengui" :script_path="crew_stats_focus.lua"/>
+		</group>
+		
+		<post hook_id="lib/states/ingamewaitingforplayers" script_path="auto_skip_intro.lua"/>			
+	</hooks>
+</mod>

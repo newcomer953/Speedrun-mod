@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<tweaks>
+	<tweak version="2" name="anims/units/enemies/cop/civilian" extension="animation_states">
+		<search> <!-- search for a game_name tag that is a child node of a context tag -->
+			<xml/>
+			<state/>
+			<to name="cm_so_drink_or_puke" redirect="civilian/act/drink"/>
+		</search>
+
+		<!--
+			If mode is set to "replace", it deletes the old tag and substitutes this one.
+			If mode is omitted (defaults to "attach"), it adds the target tag(s) as new child
+			node(s) of the searched tag instead.
+		-->
+		<target mode="replace"/>
+	</tweak>
+	<tweak version="2" name="anims/units/enemies/cop/civilian" extension="animation_states">
+		<search> <!-- search for a game_name tag that is a child node of a context tag -->
+			<xml/>
+			<state/>
+			<to name="cm_so_drink_or_puke" redirect="civilian/act/puke"/>
+		</search>
+
+		<!--
+			If mode is set to "replace", it deletes the old tag and substitutes this one.
+			If mode is omitted (defaults to "attach"), it adds the target tag(s) as new child
+			node(s) of the searched tag instead.
+		-->
+		<target mode="replace"/>
+	</tweak>
+</tweaks>
+>

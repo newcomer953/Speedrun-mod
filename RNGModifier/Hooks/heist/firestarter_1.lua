@@ -1,0 +1,127 @@
+_G.RNGModifier = _G.RNGModifier or {}
+if not RNGModifier then
+	return
+end
+local _Current_Heist = "firestarter_1"
+RNGModifier._data = RNGModifier._data or {}
+RNGModifier._data[_Current_Heist] = RNGModifier._data[_Current_Heist] or {}
+
+MenuCallbackHandler.RNGModifier_firestarter_1_ehangar = function(self, item)
+	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_ehangar")
+	RNGModifier:Save()
+end
+MenuHelper:AddMultipleChoice({
+	id = "RNGModifier_firestarter_1_ehangar",
+	title = "RNGModifier_firestarter_1_ehangar_title",
+	desc = "RNGModifier_firestarter_1_ehangar_desc",
+	callback = "RNGModifier_firestarter_1_ehangar",
+	items = {
+		"RNGModifier_Default_One_Item",
+		"RNGModifier_hangar_1",
+		"RNGModifier_hangar_2",
+		"RNGModifier_hangar_3",
+		"RNGModifier_hangar_4"
+	},
+	value = RNGModifier:SafeGetData("firestarter_1", "_ehangar"),
+	menu_id = "RNGModifier_firestarter_1_Options_Menu"
+})
+
+MenuCallbackHandler.RNGModifier_firestarter_1_hangar_1 = function(self, item)
+	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_hangar_1")
+	RNGModifier:Save()
+end
+MenuHelper:AddMultipleChoice({
+	id = "RNGModifier_firestarter_1_hangar_1",
+	title = "RNGModifier_firestarter_1_hangar_1_title",
+	desc = "RNGModifier_empty_desc",
+	callback = "RNGModifier_firestarter_1_hangar_1",
+	items = {
+		"RNGModifier_Default_One_Item",
+		"RNGModifier_hangar_1",
+		"RNGModifier_hangar_2",
+		"RNGModifier_hangar_3",
+		"RNGModifier_hangar_4"
+	},
+	value = RNGModifier:SafeGetData("firestarter_1", "_hangar_1"),
+	menu_id = "RNGModifier_firestarter_1_Options_Menu"
+})
+
+MenuCallbackHandler.RNGModifier_firestarter_1_hangar_2 = function(self, item)
+	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_hangar_2")
+	RNGModifier:Save()
+end
+MenuHelper:AddMultipleChoice({
+	id = "RNGModifier_firestarter_1_hangar_2",
+	title = "RNGModifier_firestarter_1_hangar_2_title",
+	desc = "RNGModifier_empty_desc",
+	callback = "RNGModifier_firestarter_1_hangar_2",
+	items = {
+		"RNGModifier_Default_One_Item",
+		"RNGModifier_hangar_1",
+		"RNGModifier_hangar_2",
+		"RNGModifier_hangar_3",
+		"RNGModifier_hangar_4"
+	},
+	value = RNGModifier:SafeGetData("firestarter_1", "_hangar_2"),
+	menu_id = "RNGModifier_firestarter_1_Options_Menu"
+})
+
+MenuCallbackHandler.RNGModifier_firestarter_1_gas = function(self, item)
+	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_gas")
+	RNGModifier:Save()
+end
+MenuHelper:AddMultipleChoice({
+	id = "RNGModifier_firestarter_1_gas",
+	title = "RNGModifier_firestarter_1_gas_title",
+	desc = "RNGModifier_empty_desc",
+	callback = "RNGModifier_firestarter_1_gas",
+	items = {
+		"RNGModifier_Default_One_Item",
+		"RNGModifier_gas_1",
+		"RNGModifier_gas_2",
+		"RNGModifier_gas_3",
+		"RNGModifier_gas_4"
+	},
+	value = RNGModifier:SafeGetData("firestarter_1", "_gas"),
+	menu_id = "RNGModifier_firestarter_1_Options_Menu"
+})
+
+MenuCallbackHandler.RNGModifier_firestarter_1_weapon_set = function(self, item)
+	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_weapon_set")
+	RNGModifier:Save()
+end
+MenuHelper:AddMultipleChoice({
+	id = "RNGModifier_firestarter_1_weapon_set",
+	title = "RNGModifier_firestarter_1_weapon_set_title",
+	desc = "RNGModifier_empty_desc",
+	callback = "RNGModifier_firestarter_1_weapon_set",
+	items = {
+		"RNGModifier_Default_One_Item",
+		"RNGModifier_weapon_set_1",
+		"RNGModifier_weapon_set_2",
+		"RNGModifier_weapon_set_3",
+		"RNGModifier_weapon_set_4"
+	},
+	value = RNGModifier:SafeGetData("firestarter_1", "_weapon_set"),
+	menu_id = "RNGModifier_firestarter_1_Options_Menu"
+})
+
+MenuCallbackHandler.RNGModifier_firestarter_1_eweapon_set = function(self, item)
+	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_eweapon_set")
+	RNGModifier:Save()
+end
+MenuHelper:AddMultipleChoice({
+	id = "RNGModifier_firestarter_1_eweapon_set",
+	title = "RNGModifier_firestarter_1_eweapon_set_title",
+	desc = "RNGModifier_empty_desc",
+	callback = "RNGModifier_firestarter_1_eweapon_set",
+	items = {
+		"RNGModifier_Default_One_Item",
+		"RNGModifier_weapon_set_1",
+		"RNGModifier_weapon_set_2",
+		"RNGModifier_weapon_set_3",
+		"RNGModifier_weapon_set_4"
+	},
+	value = RNGModifier:SafeGetData("firestarter_1", "_eweapon_set"),
+	menu_id = "RNGModifier_firestarter_1_Options_Menu"
+})

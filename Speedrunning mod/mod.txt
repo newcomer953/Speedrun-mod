@@ -1,0 +1,20 @@
+{
+	"name" : "Speedrunning",
+	"description" : "Allows you to customise heist RNG, displays an on-screen modlist and increases the precision of the heist timer",
+	"author" : "Dr_Newbie, ZNix, Dyrax and Fragtrane",
+	"contact" : "znix@znix.xyz",
+	"version" : "1.0",
+	"blt_version": 2
+
+	"keybinds" : [
+                {
+                        "keybind_id" : "speedrunning_restart_kb",
+                        "name" : "Restart Heist",
+                        "description" : "Restart the current heist - for speedrunning",
+                        "script_path" : "kb_restart.lua",
+                        "run_in_menu" : false,
+                        "run_in_game" : true,
+                        "localized" : false
+                }
+	]
+}

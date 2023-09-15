@@ -1,0 +1,18 @@
+{
+	"Profiles_options_menu_title" : "Extra Profiles and Skill Sets",
+	"Profiles_options_menu_desc"  : "Extra Profiles and Skill Sets mod options.",
+	
+	"Profiles_total_profiles_title" : "Number of Profiles",
+	"Profiles_total_profiles_desc"  : "Total number of profiles (including base game profiles). Click \"Save Settings\" to confirm changes.",
+	"Profiles_commit_settings_title" : "Save Settings",
+	"Profiles_commit_settings_desc"  : "Click to confirm changes, otherwise they will be discarded.",
+	
+	"Profiles_dialog_title" : "Extra Profiles and Skill Sets",
+	"Profiles_dialog_unchanged" : "Number of profiles unchanged.",
+	"Profiles_dialog_number_profiles" : "You have selected $profile_chosen profiles. You currently have $profile_current profiles.",
+	"Profiles_dialog_add_remove_single" : "Profile #$profile_single will be $profile_operation.",
+	"Profiles_dialog_add_remove_multiple" : "Profiles #$profile_min-#$profile_max will be $profile_operation.",
+	"Profiles_dialog_warn_remove" : "Warning: removing a profile will delete its skills and loadout. You cannot undo this action.",
+	"Profiles_dialog_ask_continue" : "Do you want to continue?",
+	"Profiles_dialog_saved" : "Settings saved. Restart your game for changes to take effect."
+}
