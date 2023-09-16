@@ -35,7 +35,7 @@ MenuCallbackHandler.RNGModifier_escape_overpass_night_wait_time = function(self,
 end
 MenuHelper:AddToggle({
 	id = "RNGModifier_escape_overpass_night_wait_time",
-	title = "RNGModifier_escape_overpass_night_wait_time_title",
+	title = "RNGModifier_escape_overpass_wait_time_title",
 	desc = "RNGModifier_empty_desc",
 	callback = "RNGModifier_escape_overpass_night_wait_time",
 	value = tonumber(RNGModifier:SafeGetData(_Current_Heist, "_wait_time")) == 1,
