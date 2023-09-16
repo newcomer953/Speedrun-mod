@@ -2659,7 +2659,7 @@
 	"RNGModifier_man_building_boxes_title": " Building boxes ",
 	"RNGModifier_man_building_boxes_1": "2F #1",
 	"RNGModifier_man_building_boxes_2": "2F #2",
-	"RNGModifier_man_building_boxes_3": "3F NEAR STAIR",
+	"RNGModifier_man_building_boxes_3": "2F NEAR STAIR",
 	"RNGModifier_man_building_boxes_4": "GROUND FLOOR"
 	"RNGModifier_man_spawn_title": " Spawn ",
 	"RNGModifier_man_spawn_1": "Low",

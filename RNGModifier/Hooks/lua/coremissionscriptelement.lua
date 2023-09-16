@@ -120,12 +120,12 @@ function MissionScriptElement:get_random_table_value_float(value)
 				return value[1]
 			end
 		elseif _level_id == "born" then
-			if self._id == 101532 then
+			if self._id == 101532 and tonumber(RNGModifier:SafeGetData(_level_id, "_no_objective_delay")) == 1 then
 				local _no_objective_delay = GetCheckboxValue(_level_id, "_no_objective_delay")
 				if _no_objective_delay then return value[1] end
 			end
 		elseif _level_id == "deep" then
-			if self._id == 102438 or self._id == 101686 then
+			if self._id == 102438 or self._id == 101686 and tonumber(RNGModifier:SafeGetData(_level_id, "_no_objective_delay")) == 1 then
 				local _no_pump_delay = GetCheckboxValue(_level_id, "_no_pump_delay")
 				if _no_pump_delay then return value[1] end
 			end
