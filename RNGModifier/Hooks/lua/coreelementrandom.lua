@@ -279,7 +279,7 @@ function ElementRandom:_get_random_elements()
 				rand = PickRandomFromList(rand,"_time")
 			end
 			
-		elseif _level_id == "escape_overpass" then
+		elseif _level_id == "escape_overpass" or _level_id == "escape_overpass_night" then
 			if self._id == 101976 then
 				rand = GetIndexFromChoice(PickRandomFromList(rand,"_esc"))
 			elseif self._id == 100470 then
