@@ -57,7 +57,7 @@ RNGModifier._heistlist = {
 	"watchdogs_2",
 	"watchdogs_2_day",
 	"escape_overpass",
-	"escape_overpass_day",
+	"escape_overpass_night",
 	"escape_garage",
 	"escape_street",
 	"escape_park",
