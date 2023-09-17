@@ -119,6 +119,36 @@ MenuHelper:AddMultipleChoice({
 	menu_id = "RNGModifier_hox_2_Options_Menu"
 })
 
+MenuCallbackHandler.RNGModifier_hox_2_server = function(self, item)
+	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_server")
+	RNGModifier:Save()
+end
+MenuHelper:AddMultipleChoice({
+	priority = -4.35,
+	id = "RNGModifier_hox_2_server",
+	title = "RNGModifier_hox_2_server_title",
+	desc = "RNGModifier_empty_desc",
+	callback = "RNGModifier_hox_2_server",
+	items = {
+		"RNGModifier_Default_One_Item",
+		"RNGModifier_hox_2_server_1",
+		"RNGModifier_hox_2_server_2",
+		"RNGModifier_hox_2_server_3",
+		"RNGModifier_hox_2_server_4",
+		"RNGModifier_hox_2_server_5",
+		"RNGModifier_hox_2_server_6",
+		"RNGModifier_hox_2_server_7",
+		"RNGModifier_hox_2_server_8",
+		"RNGModifier_hox_2_server_9",
+		"RNGModifier_hox_2_server_10",
+		"RNGModifier_hox_2_server_11",
+		"RNGModifier_hox_2_server_12",
+		"RNGModifier_hox_2_server_13"
+	},
+	value = RNGModifier:SafeGetData(_Current_Heist, "_server"),
+	menu_id = "RNGModifier_hox_2_Options_Menu"
+})
+
 MenuCallbackHandler.RNGModifier_hox_2_testimony_shelf = function(self, item)
 	if tostring(item:value()) == "on" then
 		RNGModifier:SafeSetData(1, _Current_Heist, "_testimony_shelf")

@@ -642,6 +642,8 @@ function ElementRandom:_get_random_elements()
 				end
 			elseif self._id == 104419 then
 				rand = PickRandomFromList(rand, "_select_random_powerbox")
+			elseif self._values.instance_name and self._values.instance_name:find("hox_fbi_it_office_00") and self._editor_name == "random" then
+				rand = PickRandomFromList(rand, "_server_location")
 			elseif self._id == 104943 or (self._editor_name == "enable_random" and self._id == 133550) then
 				--Testimony
 				local use_closest_testimony_shelf = tonumber(RNGModifier:SafeGetData(_level_id, "_testimony_shelf")) == 1 and true or false
