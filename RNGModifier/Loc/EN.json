@@ -492,6 +492,8 @@
 	"RNGModifier_escape_overpass_esc_3": "VAN",
 	
 	"RNGModifier_escape_overpass_spawn_title": "SPAWN",
+	
+	"RNGModifier_escape_spawn_desc": "DEPEND ON SPAWN, IT WILL BLOCK CERTAIN ESCAPE",
 	 
 	"RNGModifier_escape_overpass_wait_time_title": "NO DELAY (3MIN)",
 	

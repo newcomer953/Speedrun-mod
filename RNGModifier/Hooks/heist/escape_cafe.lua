@@ -49,7 +49,7 @@ end
 MenuHelper:AddMultipleChoice({
 	id = "RNGModifier_escape_cafe_spawn",
 	title = "RNGModifier_escape_cafe_spawn_title",
-	desc = "RNGModifier_empty_desc",
+	desc = "RNGModifier_escape_spawn_desc",
 	callback = "RNGModifier_escape_cafe_spawn",
 	items = {
 		"RNGModifier_Default_One_Item",
