@@ -1351,7 +1351,7 @@
 	"RNGModifier_hox_2_corridor_block_title": "Block corridor",
 	"RNGModifier_hox_2_corridor_block_desc": "Block from evidence to operations if no front 1 entrance",
 	
-	"RNGModifier_hox_2_server_location_title": "Server location",
+	"RNGModifier_hox_2_server_location_title": "OFFICE Server location",
 	"RNGModifier_hox_2_server_location_1": "Lower 1",
 	"RNGModifier_hox_2_server_location_2": "Lower 2",
 	"RNGModifier_hox_2_server_location_3": "Lower 3",
@@ -1361,7 +1361,7 @@
 	"RNGModifier_hox_2_server_location_7": "Upper 3",
 	"RNGModifier_hox_2_server_location_8": "Upper 4",
 	
-	"RNGModifier_hox_2_server_title": "SERVER ON",
+	"RNGModifier_hox_2_server_title": "SERVER LOCATION",
 	"RNGModifier_hox_2_server_1": "TABLE RIGHT #1",
 	"RNGModifier_hox_2_server_2": "TABLE MID #1",
 	"RNGModifier_hox_2_server_3": "TABLE MID #2",
