@@ -285,6 +285,8 @@ function ElementRandom:_get_random_elements()
 			elseif self._id == 100470 then
 				local wait_time = GetCheckboxValue(_level_id, "_wait_time")
 				if wait_time then rand = 1 end
+			elseif self._id == 101984 then
+				rand = GetIndexFromChoice(PickRandomFromList(rand,"_spawn"))
 			end	
 			
 		elseif _level_id == "escape_garage" then

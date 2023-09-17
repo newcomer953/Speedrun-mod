@@ -1363,18 +1363,11 @@
 	
 	"RNGModifier_hox_2_server_title": "SERVER LOCATION",
 	"RNGModifier_hox_2_server_1": "TABLE RIGHT #1",
-	"RNGModifier_hox_2_server_2": "TABLE MID #1",
-	"RNGModifier_hox_2_server_3": "TABLE MID #2",
-	"RNGModifier_hox_2_server_4": "TABLE RIGHT #2",
-	"RNGModifier_hox_2_server_5": "TABLE RIGHT #3",
-	"RNGModifier_hox_2_server_6": "FLOOR RIGHT #1",
-	"RNGModifier_hox_2_server_7": "CABINET #1",
-	"RNGModifier_hox_2_server_8": "TALL CABINET #1",
-	"RNGModifier_hox_2_server_9": "FLOOR MID ",
-	"RNGModifier_hox_2_server_10": "CABINET #2",
-	"RNGModifier_hox_2_server_11": "TABLE RIGHT #4",
-	"RNGModifier_hox_2_server_12": "TALL CABINET #2",
-	"RNGModifier_hox_2_server_13": "FLOOR RIGHT #2",
+	"RNGModifier_hox_2_server_2": "TABLE RIGHT #3",
+	"RNGModifier_hox_2_server_3": "FLOOR RIGHT #1",
+	"RNGModifier_hox_2_server_4": "FLOOR MID ",
+	"RNGModifier_hox_2_server_5": "TABLE RIGHT #4",
+	"RNGModifier_hox_2_server_6": "FLOOR RIGHT #2",
 	
 	"RNGModifier_hox_2_four_entrance_title": "Four Entrance chance",
 	

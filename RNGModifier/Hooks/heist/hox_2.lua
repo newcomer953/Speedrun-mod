@@ -136,14 +136,7 @@ MenuHelper:AddMultipleChoice({
 		"RNGModifier_hox_2_server_3",
 		"RNGModifier_hox_2_server_4",
 		"RNGModifier_hox_2_server_5",
-		"RNGModifier_hox_2_server_6",
-		"RNGModifier_hox_2_server_7",
-		"RNGModifier_hox_2_server_8",
-		"RNGModifier_hox_2_server_9",
-		"RNGModifier_hox_2_server_10",
-		"RNGModifier_hox_2_server_11",
-		"RNGModifier_hox_2_server_12",
-		"RNGModifier_hox_2_server_13"
+		"RNGModifier_hox_2_server_6"
 	},
 	value = RNGModifier:SafeGetData(_Current_Heist, "_server"),
 	menu_id = "RNGModifier_hox_2_Options_Menu"
