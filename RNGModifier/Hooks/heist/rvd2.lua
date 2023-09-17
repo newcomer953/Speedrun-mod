@@ -41,3 +41,20 @@ MenuHelper:AddMultipleChoice({
 	value = RNGModifier:SafeGetData("rvd2", "_vehicle"),
 	menu_id = "RNGModifier_rvd2_Options_Menu"
 })
+
+MenuCallbackHandler.RNGModifier_rvd2_vault_event = function(self, item)
+	if tostring(item:value()) == "on" then
+		RNGModifier:SafeSetData(1, _Current_Heist, "_vault_event")
+	else
+		RNGModifier:SafeSetData(0, _Current_Heist, "_vault_event")
+	end
+	RNGModifier:Save()
+end
+MenuHelper:AddToggle({
+	id = "RNGModifier_rvd2_vault_event",
+	title = "RNGModifier_rvd2_vault_event_title",
+	desc = "RNGModifier_empty_desc",
+	callback = "RNGModifier_rvd2_vault_event",
+	value = tonumber(RNGModifier:SafeGetData(_Current_Heist, "_vault_event")) == 1,
+	menu_id = "RNGModifier_" .. _Current_Heist .. "_Options_Menu"
+})

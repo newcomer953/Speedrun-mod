@@ -7,21 +7,20 @@ RNGModifier._data = RNGModifier._data or {}
 RNGModifier._data[_Current_Heist] = RNGModifier._data[_Current_Heist] or {}
 
 MenuCallbackHandler.RNGModifier_kosugi_call_blackhawk = function(self, item)
-	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_call_blackhawk")
+	if tostring(item:value()) == "on" then
+		RNGModifier:SafeSetData(1, _Current_Heist, "_call_blackhawk")
+	else
+		RNGModifier:SafeSetData(0, _Current_Heist, "_call_blackhawk")
+	end
 	RNGModifier:Save()
 end
-MenuHelper:AddMultipleChoice({
+MenuHelper:AddToggle({
 	id = "RNGModifier_kosugi_call_blackhawk",
 	title = "RNGModifier_kosugi_call_blackhawk_title",
 	desc = "RNGModifier_empty_desc",
 	callback = "RNGModifier_kosugi_call_blackhawk",
-	items = {
-		"RNGModifier_Default_One_Item",
-		"RNGModifier_bool_4_true",
-		"RNGModifier_bool_4_false"
-	},
-	value = RNGModifier:SafeGetData("kosugi", "_call_blackhawk"),
-	menu_id = "RNGModifier_kosugi_Options_Menu"
+	value = tonumber(RNGModifier:SafeGetData(_Current_Heist, "_call_blackhawk")) == 1,
+	menu_id = "RNGModifier_" .. _Current_Heist .. "_Options_Menu"
 })
 
 MenuCallbackHandler.RNGModifier_kosugi_loot = function(self, item)
@@ -287,21 +286,20 @@ MenuHelper:AddMultipleChoice({
 })
 
 MenuCallbackHandler.RNGModifier_kosugi_gate = function(self, item)
-	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_gate")
+	if tostring(item:value()) == "on" then
+		RNGModifier:SafeSetData(1, _Current_Heist, "_gate")
+	else
+		RNGModifier:SafeSetData(0, _Current_Heist, "_gate")
+	end
 	RNGModifier:Save()
 end
-MenuHelper:AddMultipleChoice({
+MenuHelper:AddToggle({
 	id = "RNGModifier_kosugi_gate",
 	title = "RNGModifier_kosugi_gate_title",
 	desc = "RNGModifier_empty_desc",
 	callback = "RNGModifier_kosugi_gate",
-	items = {
-		"RNGModifier_Default_One_Item",
-		"RNGModifier_bool_4_true",
-		"RNGModifier_bool_4_false"
-	},
-	value = RNGModifier:SafeGetData("kosugi", "_gate"),
-	menu_id = "RNGModifier_kosugi_Options_Menu"
+	value = tonumber(RNGModifier:SafeGetData(_Current_Heist, "_gate")) == 1,
+	menu_id = "RNGModifier_" .. _Current_Heist .. "_Options_Menu"
 })
 
 MenuCallbackHandler.RNGModifier_kosugi_spawn = function(self, item)
@@ -322,20 +320,111 @@ MenuHelper:AddMultipleChoice({
 	menu_id = "RNGModifier_kosugi_Options_Menu"
 })
 
-MenuCallbackHandler.RNGModifier_kosugi_money_container = function(self, item)
-	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_money_container")
+MenuCallbackHandler.RNGModifier_kosugi_money_container1 = function(self, item)
+	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_money_container1")
 	RNGModifier:Save()
 end
 MenuHelper:AddMultipleChoice({
-	id = "RNGModifier_kosugi_money_container",
-	title = "RNGModifier_kosugi_money_container_title",
-	desc = "RNGModifier_kosugi_money_container_desc",
-	callback = "RNGModifier_kosugi_money_container",
+	id = "RNGModifier_kosugi_money_container1",
+	title = "RNGModifier_kosugi_money_container1_title",
+	desc = "RNGModifier_empty_desc",
+	callback = "RNGModifier_kosugi_money_container1",
 	items = {
 		"RNGModifier_Default_One_Item",
-		"RNGModifier_bool_4_true"
+		"RNGModifier_kosugi_money_container_1",
+		"RNGModifier_kosugi_money_container_2",
+		"RNGModifier_kosugi_money_container_3",
+		"RNGModifier_kosugi_money_container_4",
+		"RNGModifier_kosugi_money_container_5",
+		"RNGModifier_kosugi_money_container_6",
+		"RNGModifier_kosugi_money_container_7",
+		"RNGModifier_kosugi_money_container_8",
+		"RNGModifier_kosugi_money_container_9",
+		"RNGModifier_kosugi_money_container_10",
+		"RNGModifier_kosugi_money_container_11"
 	},
-	value = RNGModifier:SafeGetData(_Current_Heist, "_money_container"),
+	value = RNGModifier:SafeGetData("kosugi", "_money_container1"),
+	menu_id = "RNGModifier_kosugi_Options_Menu"
+})
+
+MenuCallbackHandler.RNGModifier_kosugi_money_container2 = function(self, item)
+	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_money_container2")
+	RNGModifier:Save()
+end
+MenuHelper:AddMultipleChoice({
+	id = "RNGModifier_kosugi_money_container2",
+	title = "RNGModifier_kosugi_money_container2_title",
+	desc = "RNGModifier_empty_desc",
+	callback = "RNGModifier_kosugi_money_container2",
+	items = {
+		"RNGModifier_Default_One_Item",
+		"RNGModifier_kosugi_money_container_1",
+		"RNGModifier_kosugi_money_container_2",
+		"RNGModifier_kosugi_money_container_3",
+		"RNGModifier_kosugi_money_container_4",
+		"RNGModifier_kosugi_money_container_5",
+		"RNGModifier_kosugi_money_container_6",
+		"RNGModifier_kosugi_money_container_7",
+		"RNGModifier_kosugi_money_container_8",
+		"RNGModifier_kosugi_money_container_9",
+		"RNGModifier_kosugi_money_container_10",
+		"RNGModifier_kosugi_money_container_11"
+	},
+	value = RNGModifier:SafeGetData("kosugi", "_money_container2"),
+	menu_id = "RNGModifier_kosugi_Options_Menu"
+})
+
+MenuCallbackHandler.RNGModifier_kosugi_money_container3 = function(self, item)
+	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_money_container3")
+	RNGModifier:Save()
+end
+MenuHelper:AddMultipleChoice({
+	id = "RNGModifier_kosugi_money_container3",
+	title = "RNGModifier_kosugi_money_container3_title",
+	desc = "RNGModifier_empty_desc",
+	callback = "RNGModifier_kosugi_money_container3",
+	items = {
+		"RNGModifier_Default_One_Item",
+		"RNGModifier_kosugi_money_container_1",
+		"RNGModifier_kosugi_money_container_2",
+		"RNGModifier_kosugi_money_container_3",
+		"RNGModifier_kosugi_money_container_4",
+		"RNGModifier_kosugi_money_container_5",
+		"RNGModifier_kosugi_money_container_6",
+		"RNGModifier_kosugi_money_container_7",
+		"RNGModifier_kosugi_money_container_8",
+		"RNGModifier_kosugi_money_container_9",
+		"RNGModifier_kosugi_money_container_10",
+		"RNGModifier_kosugi_money_container_11"
+	},
+	value = RNGModifier:SafeGetData("kosugi", "_money_container3"),
+	menu_id = "RNGModifier_kosugi_Options_Menu"
+})
+
+MenuCallbackHandler.RNGModifier_kosugi_money_container4 = function(self, item)
+	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_money_container4")
+	RNGModifier:Save()
+end
+MenuHelper:AddMultipleChoice({
+	id = "RNGModifier_kosugi_money_container4",
+	title = "RNGModifier_kosugi_money_container4_title",
+	desc = "RNGModifier_empty_desc",
+	callback = "RNGModifier_kosugi_money_container4",
+	items = {
+		"RNGModifier_Default_One_Item",
+		"RNGModifier_kosugi_money_container_1",
+		"RNGModifier_kosugi_money_container_2",
+		"RNGModifier_kosugi_money_container_3",
+		"RNGModifier_kosugi_money_container_4",
+		"RNGModifier_kosugi_money_container_5",
+		"RNGModifier_kosugi_money_container_6",
+		"RNGModifier_kosugi_money_container_7",
+		"RNGModifier_kosugi_money_container_8",
+		"RNGModifier_kosugi_money_container_9",
+		"RNGModifier_kosugi_money_container_10",
+		"RNGModifier_kosugi_money_container_11"
+	},
+	value = RNGModifier:SafeGetData("kosugi", "_money_container4"),
 	menu_id = "RNGModifier_kosugi_Options_Menu"
 })
 
@@ -491,3 +580,56 @@ MenuHelper:AddMultipleChoice({
 	value = RNGModifier:SafeGetData(_Current_Heist, "_crate_loc_6"),
 	menu_id = "RNGModifier_kosugi_Options_Menu"
 })
+
+--[[MenuCallbackHandler.RNGModifier_kosugi_call_blackhawk = function(self, item)
+	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_call_blackhawk")
+	RNGModifier:Save()
+end
+MenuHelper:AddMultipleChoice({
+	id = "RNGModifier_kosugi_call_blackhawk",
+	title = "RNGModifier_kosugi_call_blackhawk_title",
+	desc = "RNGModifier_empty_desc",
+	callback = "RNGModifier_kosugi_call_blackhawk",
+	items = {
+		"RNGModifier_Default_One_Item",
+		"RNGModifier_bool_4_true",
+		"RNGModifier_bool_4_false"
+	},
+	value = RNGModifier:SafeGetData("kosugi", "_call_blackhawk"),
+	menu_id = "RNGModifier_kosugi_Options_Menu"
+})
+
+MenuCallbackHandler.RNGModifier_kosugi_gate = function(self, item)
+	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_gate")
+	RNGModifier:Save()
+end
+MenuHelper:AddMultipleChoice({
+	id = "RNGModifier_kosugi_gate",
+	title = "RNGModifier_kosugi_gate_title",
+	desc = "RNGModifier_empty_desc",
+	callback = "RNGModifier_kosugi_gate",
+	items = {
+		"RNGModifier_Default_One_Item",
+		"RNGModifier_bool_4_true",
+		"RNGModifier_bool_4_false"
+	},
+	value = RNGModifier:SafeGetData("kosugi", "_gate"),
+	menu_id = "RNGModifier_kosugi_Options_Menu"
+})
+
+MenuCallbackHandler.RNGModifier_kosugi_money_container = function(self, item)
+	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_money_container")
+	RNGModifier:Save()
+end
+MenuHelper:AddMultipleChoice({
+	id = "RNGModifier_kosugi_money_container",
+	title = "RNGModifier_kosugi_money_container_title",
+	desc = "RNGModifier_kosugi_money_container_desc",
+	callback = "RNGModifier_kosugi_money_container",
+	items = {
+		"RNGModifier_Default_One_Item",
+		"RNGModifier_bool_4_true"
+	},
+	value = RNGModifier:SafeGetData(_Current_Heist, "_money_container"),
+	menu_id = "RNGModifier_kosugi_Options_Menu"
+})]]

@@ -44,7 +44,7 @@ MenuHelper:AddMultipleChoice({
 })
 
 
-MenuCallbackHandler.RNGModifier_family_chance_of_door = function(self, item)
+--[[MenuCallbackHandler.RNGModifier_family_chance_of_door = function(self, item)
 	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_chance_of_door")
 	RNGModifier:Save()
 end
@@ -60,4 +60,21 @@ MenuHelper:AddMultipleChoice({
 	},
 	value = RNGModifier:SafeGetData("family", "_chance_of_door"),
 	menu_id = "RNGModifier_family_Options_Menu"
+})]]
+
+MenuCallbackHandler.RNGModifier_family_chance_of_door = function(self, item)
+	if tostring(item:value()) == "on" then
+		RNGModifier:SafeSetData(1, _Current_Heist, "_chance_of_door")
+	else
+		RNGModifier:SafeSetData(0, _Current_Heist, "_chance_of_door")
+	end
+	RNGModifier:Save()
+end
+MenuHelper:AddToggle({
+	id = "RNGModifier_family_chance_of_door",
+	title = "RNGModifier_family_chance_of_door_title",
+	desc = "RNGModifier_empty_desc",
+	callback = "RNGModifier_family_chance_of_door",
+	value = tonumber(RNGModifier:SafeGetData(_Current_Heist, "_chance_of_door")) == 1,
+	menu_id = "RNGModifier_" .. _Current_Heist .. "_Options_Menu"
 })

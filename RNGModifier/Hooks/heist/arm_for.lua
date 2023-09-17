@@ -112,7 +112,7 @@ MenuHelper:AddMultipleChoice({
 	},
 	value = RNGModifier:SafeGetData("arm_for", "_chance_boat_or_truck"),
 	menu_id = "RNGModifier_arm_for_Options_Menu"
-})]]
+})
 
 MenuCallbackHandler.RNGModifier_arm_for_chance_boat_or_truck = function(self, item)
 	if tostring(item:value()) == "on" then
@@ -133,7 +133,7 @@ MenuHelper:AddToggle({
 })
 _bool = nil
 
---[[MenuCallbackHandler.RNGModifier_arm_for_chance_for_hack = function(self, item)
+MenuCallbackHandler.RNGModifier_arm_for_chance_for_hack = function(self, item)
 	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_chance_for_hack")
 	RNGModifier:Save()
 end
@@ -158,13 +158,28 @@ MenuCallbackHandler.RNGModifier_arm_for_chance_for_hack = function(self, item)
 	end
 	RNGModifier:Save()
 end
-_bool = tonumber(RNGModifier:SafeGetData(_Current_Heist, "_chance_for_hack")) == 1 and true or false
 MenuHelper:AddToggle({
 	id = "RNGModifier_arm_for_chance_for_hack",
 	title = "RNGModifier_arm_for_chance_for_hack_title",
 	desc = "RNGModifier_empty_desc",
 	callback = "RNGModifier_arm_for_chance_for_hack",
-	value = _bool,
-	menu_id = "RNGModifier_arm_for_Options_Menu"
+	value = tonumber(RNGModifier:SafeGetData(_Current_Heist, "_chance_for_hack")) == 1,
+	menu_id = "RNGModifier_" .. _Current_Heist .. "_Options_Menu"
 })
-_bool = nil
+
+MenuCallbackHandler.RNGModifier_arm_for_chance_boat_or_truck = function(self, item)
+	if tostring(item:value()) == "on" then
+		RNGModifier:SafeSetData(1, _Current_Heist, "_chance_boat_or_truck")
+	else
+		RNGModifier:SafeSetData(0, _Current_Heist, "_chance_boat_or_truck")
+	end
+	RNGModifier:Save()
+end
+MenuHelper:AddToggle({
+	id = "RNGModifier_arm_for_chance_boat_or_truck",
+	title = "RNGModifier_arm_for_chance_boat_or_truck_title",
+	desc = "RNGModifier_empty_desc",
+	callback = "RNGModifier_arm_for_chance_boat_or_truck",
+	value = tonumber(RNGModifier:SafeGetData(_Current_Heist, "_chance_boat_or_truck")) == 1,
+	menu_id = "RNGModifier_" .. _Current_Heist .. "_Options_Menu"
+})

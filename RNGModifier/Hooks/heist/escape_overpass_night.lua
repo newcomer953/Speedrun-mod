@@ -41,3 +41,22 @@ MenuHelper:AddToggle({
 	value = tonumber(RNGModifier:SafeGetData(_Current_Heist, "_wait_time")) == 1,
 	menu_id = "RNGModifier_" .. _Current_Heist .. "_Options_Menu"
 })
+
+MenuCallbackHandler.RNGModifier_escape_overpass_night_spawn = function(self, item)
+	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_spawn")
+	RNGModifier:Save()
+end
+MenuHelper:AddMultipleChoice({
+	id = "RNGModifier_escape_overpass_night_spawn",
+	title = "RNGModifier_escape_overpass_spawn_title",
+	desc = "RNGModifier_empty_desc",
+	callback = "RNGModifier_escape_overpass_night_spawn",
+	items = {
+		"RNGModifier_Default_One_Item",
+		"RNGModifier_number_4_use_1",
+		"RNGModifier_number_4_use_2",
+		"RNGModifier_number_4_use_3"
+	},
+	value = RNGModifier:SafeGetData(_Current_Heist, "_spawn"),
+	menu_id = "RNGModifier_escape_overpass_night_Options_Menu"
+})

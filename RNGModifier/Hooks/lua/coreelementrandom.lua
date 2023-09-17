@@ -461,44 +461,23 @@ function ElementRandom:_get_random_elements()
 				rand = PickRandomFromList(rand,"_keycard_special")
 			elseif self._id == 102403 then
 				rand = PickRandomFromList(rand,"_keycard_warehouse")
-			elseif self._id == 101823 then
+			--[[elseif self._id == 101823 then
 				rand = PickRandomFromList(rand,"_code")
-			elseif self._id == 102028 then
-				rand = PickRandomFromList(rand,"_notepad_4_1st")
-			elseif self._id == 102029 then
-				rand = PickRandomFromList(rand,"_notepad_4_2nd")
-			elseif self._id == 102030 then
-				rand = PickRandomFromList(rand,"_notepad_4_3rd")
-			elseif self._id == 102031 then
-				rand = PickRandomFromList(rand,"_notepad_4_4th")
-				
-			elseif self._id == 101951 then
-				rand = PickRandomFromList(rand,"_notepad_3_1st")
-			elseif self._id == 101952 then               
-				rand = PickRandomFromList(rand,"_notepad_3_2nd")
-			elseif self._id == 101953 then               
-				rand = PickRandomFromList(rand,"_notepad_3_3rd")
-			elseif self._id == 101954 then               
-				rand = PickRandomFromList(rand,"_notepad_3_4th")
-				
-			elseif self._id == 101902 then
-				rand = PickRandomFromList(rand,"_notepad_2_1st")
-			elseif self._id == 101903 then               
-				rand = PickRandomFromList(rand,"_notepad_2_2nd")
-			elseif self._id == 101904 then               
-				rand = PickRandomFromList(rand,"_notepad_2_3rd")
-			elseif self._id == 101905 then               
-				rand = PickRandomFromList(rand,"_notepad_2_4th")
-				
-			elseif self._id == 101859 then
-				rand = PickRandomFromList(rand,"_notepad_1_1st")
-			elseif self._id == 101860 then               
-				rand = PickRandomFromList(rand,"_notepad_1_2nd")
-			elseif self._id == 101861 then               
-				rand = PickRandomFromList(rand,"_notepad_1_3rd")
-			elseif self._id == 101862 then               
-				rand = PickRandomFromList(rand,"_notepad_1_4th")
-				
+			elseif self._id == 102028 or self._id == 102029 or self._id == 102030 or self._id == 102031 then
+				local _notepad_4th = GetMultipleChoiceValue(_level_id, "_notepad_4th")
+				if _notepad_4th == 1 then -- Notepad 4th all 0
+					rand = 1
+				end								
+			elseif self._id == 101902 or self._id == 101903 or self._id == 101904 or self._id == 101905 then
+				local _notepad_2nd = GetMultipleChoiceValue(_level_id, "_notepad_2nd")
+				if _notepad_2nd == 1 then -- Notepad 2nd all 0
+					rand = 1
+				end				
+			elseif self._id == 101859 or self._id == 101860 or self._id == 101861 or self._id == 101862 then
+				local _notepad_1st = GetMultipleChoiceValue(_level_id, "_notepad_1st")
+				if _notepad_1st == 1 then -- Notepad 1st all 0
+					rand = 1
+				end]]			
 			elseif self._id == 102401 then
 				rand = PickRandomFromList(rand,"_crowbar_auction")
 			elseif self._id == 102402 then
@@ -533,7 +512,25 @@ function ElementRandom:_get_random_elements()
 			elseif self._id == 101111 then
 				rand = PickRandomFromList(rand,"_security_room")
 			end
-		
+			
+			local _notepad_code = GetCheckboxValue(_level_id, "_notepad_code")
+			if _notepad_code then
+				if self._id == 101951 then	-- Notepad 3rd 1st = 0
+					rand = 10
+				elseif table.contains({101859,101860,101861,101862,101902,101903,101904,101905,101952,101953,101954,102028,102029,102030,102031,101823}, self._id) then
+					rand = 1
+				end
+			end	
+			
+			--[[local _notepad_3rd = GetMultipleChoiceValue(_level_id, "_notepad_3rd")
+			if _notepad_3rd == 1 then
+				if self._id == 101951 then	-- Notepad 3rd 1st = 0
+					rand = 10
+				elseif self._id == 101952 or self._id == 101953 or self._id == 101954 then
+					rand = 1
+				end
+			end]]	
+			
 		elseif _level_id == "framing_frame_1" or _level_id == "gallery" then
 			if self._id == 100515 then							
 				_tmp_data[_level_id] = _tmp_data[_level_id] or {}
@@ -1881,6 +1878,11 @@ function ElementRandom:_get_random_elements()
 				rand = PickRandomFromList(rand, "_hack")
 			elseif self._id == 100581 then
 				rand = PickRandomFromList(rand, "_vehicle")
+			elseif self._id == 101115 then
+				local _vault_event = GetCheckboxValue(_level_id, "_vault_event")
+				if _vault_event then
+					rand = 4
+				end
 			end			
 		elseif _level_id == "brb" then
 			if self._id == 100619 then
@@ -2175,7 +2177,10 @@ function ElementRandom:_get_random_elements()
 			
 		elseif _level_id == "kosugi" then
 			if self._id == 101384 then
-				rand = PickRandomFromList(rand, "_call_blackhawk")
+				local _call_blackhawk = GetCheckboxValue(_level_id, "_call_blackhawk")
+				if _call_blackhawk then rand = 1
+				else rand = 2 end
+				--rand = PickRandomFromList(rand, "_call_blackhawk")
 			elseif table.contains({100950,100944,100946,100941,100949,100947,100943,100942,100945}, self._id) then
 				rand = PickRandomFromList(rand, "_loot")
 			elseif self._id == 102821 then
@@ -2234,7 +2239,10 @@ function ElementRandom:_get_random_elements()
 			elseif self._id == 100896 then
 				rand = PickRandomFromList(rand, "_server")
 			elseif self._id == 101070 then
-				rand = PickRandomFromList(rand, "_gate")
+				local _gate = GetCheckboxValue(_level_id, "_gate")
+				if _gate then rand = 1
+				else rand = 2 end
+				--rand = PickRandomFromList(rand, "_gate")
 			elseif self._id == 100126 then
 				rand = PickRandomFromList(rand, "_spawn")
 			elseif self._id == 100875 then
@@ -2257,7 +2265,19 @@ function ElementRandom:_get_random_elements()
 			elseif self._id == 104030 then
 				rand = PickRandomFromList(rand, "_weaponDW")
 			elseif self._id == 102358 then
-				rand = PickRandomFromList(rand, "_money_container")
+			
+				local money_container_1 = (RNGModifier:SafeGetData(_level_id, "_money_container1") or 0) - 1
+				local money_container_2 = (RNGModifier:SafeGetData(_level_id, "_money_container2") or 0) - 1
+				local money_container_3 = (RNGModifier:SafeGetData(_level_id, "_money_container3") or 0) - 1
+				local money_container_4 = (RNGModifier:SafeGetData(_level_id, "_money_container4") or 0) - 1
+				
+				for i, choice in ipairs(self._unused_randoms) do
+					if choice == money_container_1 or choice == money_container_2 or choice == money_container_3 or choice == money_container_4 then
+						rand = i
+						break
+					end
+				end
+				
 			elseif self._id == 100404 then
 				_tmp_data[_level_id] = _tmp_data[_level_id] or {}
 				_tmp_data[_level_id]["random_crates"] = _tmp_data[_level_id]["random_crates"] or 0

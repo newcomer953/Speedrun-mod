@@ -144,7 +144,7 @@ MenuHelper:AddMultipleChoice({
 	menu_id = "RNGModifier_chas_Options_Menu"
 })
 
-MenuCallbackHandler.RNGModifier_chas_code = function(self, item)
+--[[MenuCallbackHandler.RNGModifier_chas_code = function(self, item)
 	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_code")
 	RNGModifier:Save()
 end
@@ -165,452 +165,104 @@ MenuHelper:AddMultipleChoice({
 	menu_id = "RNGModifier_chas_Options_Menu"
 })
 
-
-MenuCallbackHandler.RNGModifier_chas_notepad_4_1st = function(self, item)
-	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_notepad_4_1st")
-	RNGModifier:Save()
-end
-MenuHelper:AddMultipleChoice({
-	priority = 16,
-	id = "RNGModifier_chas_notepad_4_1st",
-	title = "RNGModifier_chas_notepad_4_1st_title",
-	desc = "RNGModifier_empty_desc",
-	callback = "RNGModifier_chas_notepad_4_1st",
-	items = {
-		"RNGModifier_Default_One_Item",
-		"RNGModifier_number_4_use_0",
-		"RNGModifier_number_4_use_1",
-		"RNGModifier_number_4_use_2",
-		"RNGModifier_number_4_use_3",
-		"RNGModifier_number_4_use_4",
-		"RNGModifier_number_4_use_5",
-		"RNGModifier_number_4_use_6",
-		"RNGModifier_number_4_use_7",
-		"RNGModifier_number_4_use_8",
-		"RNGModifier_number_4_use_9"
-	},
-	value = RNGModifier:SafeGetData("chas", "_notepad_4_1st"),
-	menu_id = "RNGModifier_chas_Options_Menu"
-})
-
-MenuCallbackHandler.RNGModifier_chas_notepad_4_2nd = function(self, item)
-	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_notepad_4_2nd")
-	RNGModifier:Save()
-end
-MenuHelper:AddMultipleChoice({
-	priority = 15,
-	id = "RNGModifier_chas_notepad_4_2nd",
-	title = "RNGModifier_chas_notepad_4_2nd_title",
-	desc = "RNGModifier_empty_desc",
-	callback = "RNGModifier_chas_notepad_4_2nd",
-	items = {
-		"RNGModifier_Default_One_Item",
-		"RNGModifier_number_4_use_0",
-		"RNGModifier_number_4_use_1",
-		"RNGModifier_number_4_use_2",
-		"RNGModifier_number_4_use_3",
-		"RNGModifier_number_4_use_4",
-		"RNGModifier_number_4_use_5",
-		"RNGModifier_number_4_use_6",
-		"RNGModifier_number_4_use_7",
-		"RNGModifier_number_4_use_8",
-		"RNGModifier_number_4_use_9"
-		
-	},
-	value = RNGModifier:SafeGetData("chas", "_notepad_4_2nd"),
-	menu_id = "RNGModifier_chas_Options_Menu"
-})
-
-MenuCallbackHandler.RNGModifier_chas_notepad_4_3rd = function(self, item)
-	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_notepad_4_3rd")
-	RNGModifier:Save()
-end
-MenuHelper:AddMultipleChoice({
-	priority = 14,
-	id = "RNGModifier_chas_notepad_4_3rd",
-	title = "RNGModifier_chas_notepad_4_3rd_title",
-	desc = "RNGModifier_empty_desc",
-	callback = "RNGModifier_chas_notepad_4_3rd",
-	items = {
-		"RNGModifier_Default_One_Item",
-		"RNGModifier_number_4_use_0",
-		"RNGModifier_number_4_use_1",
-		"RNGModifier_number_4_use_2",
-		"RNGModifier_number_4_use_3",
-		"RNGModifier_number_4_use_4",
-		"RNGModifier_number_4_use_5",
-		"RNGModifier_number_4_use_6",
-		"RNGModifier_number_4_use_7",
-		"RNGModifier_number_4_use_8",
-		"RNGModifier_number_4_use_9"
-		
-	},
-	value = RNGModifier:SafeGetData("chas", "_notepad_4_3rd"),
-	menu_id = "RNGModifier_chas_Options_Menu"
-})
-
-MenuCallbackHandler.RNGModifier_chas_notepad_4_4th = function(self, item)
-	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_notepad_4_4th")
+MenuCallbackHandler.RNGModifier_chas_notepad_4th = function(self, item)
+	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_notepad_4th")
 	RNGModifier:Save()
 end
 MenuHelper:AddMultipleChoice({
 	priority = 13,
-	id = "RNGModifier_chas_notepad_4_4th",
-	title = "RNGModifier_chas_notepad_4_4th_title",
+	id = "RNGModifier_chas_notepad_4th",
+	title = "RNGModifier_chas_notepad_4th_title",
 	desc = "RNGModifier_empty_desc",
-	callback = "RNGModifier_chas_notepad_4_4th",
+	callback = "RNGModifier_chas_notepad_4th",
 	items = {
 		"RNGModifier_Default_One_Item",
-		"RNGModifier_number_4_use_0",
-		"RNGModifier_number_4_use_1",
-		"RNGModifier_number_4_use_2",
-		"RNGModifier_number_4_use_3",
-		"RNGModifier_number_4_use_4",
-		"RNGModifier_number_4_use_5",
-		"RNGModifier_number_4_use_6",
-		"RNGModifier_number_4_use_7",
-		"RNGModifier_number_4_use_8",
-		"RNGModifier_number_4_use_9"
+		"RNGModifier_chas_notepad_1",
+		"RNGModifier_chas_notepad_2"
 		
 	},
-	value = RNGModifier:SafeGetData("chas", "_notepad_4_4th"),
+	value = RNGModifier:SafeGetData("chas", "_notepad_4th"),
 	menu_id = "RNGModifier_chas_Options_Menu"
 })
 
-MenuCallbackHandler.RNGModifier_chas_notepad_3_1st = function(self, item)
-	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_notepad_3_1st")
-	RNGModifier:Save()
-end
-MenuHelper:AddMultipleChoice({
-	priority = 20,
-	id = "RNGModifier_chas_notepad_3_1st",
-	title = "RNGModifier_chas_notepad_3_1st_title",
-	desc = "RNGModifier_empty_desc",
-	callback = "RNGModifier_chas_notepad_3_1st",
-	items = {
-		"RNGModifier_Default_One_Item",		
-		"RNGModifier_number_4_use_1",
-		"RNGModifier_number_4_use_2",
-		"RNGModifier_number_4_use_3",
-		"RNGModifier_number_4_use_4",
-		"RNGModifier_number_4_use_5",
-		"RNGModifier_number_4_use_6",
-		"RNGModifier_number_4_use_7",
-		"RNGModifier_number_4_use_8",
-		"RNGModifier_number_4_use_9",
-		"RNGModifier_number_4_use_0"
-	},
-	value = RNGModifier:SafeGetData("chas", "_notepad_3_1st"),
-	menu_id = "RNGModifier_chas_Options_Menu"
-})
 
-MenuCallbackHandler.RNGModifier_chas_notepad_3_2nd = function(self, item)
-	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_notepad_3_2nd")
-	RNGModifier:Save()
-end
-MenuHelper:AddMultipleChoice({
-	priority = 19,
-	id = "RNGModifier_chas_notepad_3_2nd",
-	title = "RNGModifier_chas_notepad_3_2nd_title",
-	desc = "RNGModifier_empty_desc",
-	callback = "RNGModifier_chas_notepad_3_2nd",
-	items = {
-		"RNGModifier_Default_One_Item",
-		"RNGModifier_number_4_use_0",
-		"RNGModifier_number_4_use_1",
-		"RNGModifier_number_4_use_2",
-		"RNGModifier_number_4_use_3",
-		"RNGModifier_number_4_use_4",
-		"RNGModifier_number_4_use_5",
-		"RNGModifier_number_4_use_6",
-		"RNGModifier_number_4_use_7",
-		"RNGModifier_number_4_use_8",
-		"RNGModifier_number_4_use_9"
-		
-	},
-	value = RNGModifier:SafeGetData("chas", "_notepad_3_2nd"),
-	menu_id = "RNGModifier_chas_Options_Menu"
-})
-
-MenuCallbackHandler.RNGModifier_chas_notepad_3_3rd = function(self, item)
-	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_notepad_3_3rd")
+MenuCallbackHandler.RNGModifier_chas_notepad_3rd = function(self, item)
+	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_notepad_3rd")
 	RNGModifier:Save()
 end
 MenuHelper:AddMultipleChoice({
 	priority = 18,
-	id = "RNGModifier_chas_notepad_3_3rd",
-	title = "RNGModifier_chas_notepad_3_3rd_title",
+	id = "RNGModifier_chas_notepad_3rd",
+	title = "RNGModifier_chas_notepad_3rd_title",
 	desc = "RNGModifier_empty_desc",
-	callback = "RNGModifier_chas_notepad_3_3rd",
+	callback = "RNGModifier_chas_notepad_3rd",
 	items = {
 		"RNGModifier_Default_One_Item",
-		"RNGModifier_number_4_use_0",
-		"RNGModifier_number_4_use_1",
-		"RNGModifier_number_4_use_2",
-		"RNGModifier_number_4_use_3",
-		"RNGModifier_number_4_use_4",
-		"RNGModifier_number_4_use_5",
-		"RNGModifier_number_4_use_6",
-		"RNGModifier_number_4_use_7",
-		"RNGModifier_number_4_use_8",
-		"RNGModifier_number_4_use_9"
+		"RNGModifier_chas_notepad_1",
+		"RNGModifier_chas_notepad_2"
 		
 	},
-	value = RNGModifier:SafeGetData("chas", "_notepad_3_3rd"),
-	menu_id = "RNGModifier_chas_Options_Menu"
-})
-
-MenuCallbackHandler.RNGModifier_chas_notepad_3_4th = function(self, item)
-	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_notepad_3_4th")
-	RNGModifier:Save()
-end
-MenuHelper:AddMultipleChoice({
-	priority = 17,
-	id = "RNGModifier_chas_notepad_3_4th",
-	title = "RNGModifier_chas_notepad_3_4th_title",
-	desc = "RNGModifier_empty_desc",
-	callback = "RNGModifier_chas_notepad_3_4th",
-	items = {
-		"RNGModifier_Default_One_Item",
-		"RNGModifier_number_4_use_0",
-		"RNGModifier_number_4_use_1",
-		"RNGModifier_number_4_use_2",
-		"RNGModifier_number_4_use_3",
-		"RNGModifier_number_4_use_4",
-		"RNGModifier_number_4_use_5",
-		"RNGModifier_number_4_use_6",
-		"RNGModifier_number_4_use_7",
-		"RNGModifier_number_4_use_8",
-		"RNGModifier_number_4_use_9"
-		
-	},
-	value = RNGModifier:SafeGetData("chas", "_notepad_3_4th"),
+	value = RNGModifier:SafeGetData("chas", "_notepad_3rd"),
 	menu_id = "RNGModifier_chas_Options_Menu"
 })
 
 
-MenuCallbackHandler.RNGModifier_chas_notepad_2_1st = function(self, item)
-	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_notepad_2_1st")
-	RNGModifier:Save()
-end
-MenuHelper:AddMultipleChoice({
-	priority = 24,
-	id = "RNGModifier_chas_notepad_2_1st",
-	title = "RNGModifier_chas_notepad_2_1st_title",
-	desc = "RNGModifier_empty_desc",
-	callback = "RNGModifier_chas_notepad_2_1st",
-	items = {
-		"RNGModifier_Default_One_Item",
-		"RNGModifier_number_4_use_0",
-		"RNGModifier_number_4_use_1",
-		"RNGModifier_number_4_use_2",
-		"RNGModifier_number_4_use_3",
-		"RNGModifier_number_4_use_4",
-		"RNGModifier_number_4_use_5",
-		"RNGModifier_number_4_use_6",
-		"RNGModifier_number_4_use_7",
-		"RNGModifier_number_4_use_8",
-		"RNGModifier_number_4_use_9"
-		
-	},
-	value = RNGModifier:SafeGetData("chas", "_notepad_2_1st"),
-	menu_id = "RNGModifier_chas_Options_Menu"
-})
-
-MenuCallbackHandler.RNGModifier_chas_notepad_2_2nd = function(self, item)
-	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_notepad_2_2nd")
+MenuCallbackHandler.RNGModifier_chas_notepad_2nd = function(self, item)
+	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_notepad_2nd")
 	RNGModifier:Save()
 end
 MenuHelper:AddMultipleChoice({
 	priority = 23,
-	id = "RNGModifier_chas_notepad_2_2nd",
-	title = "RNGModifier_chas_notepad_2_2nd_title",
+	id = "RNGModifier_chas_notepad_2nd",
+	title = "RNGModifier_chas_notepad_2nd_title",
 	desc = "RNGModifier_empty_desc",
-	callback = "RNGModifier_chas_notepad_2_2nd",
+	callback = "RNGModifier_chas_notepad_2nd",
 	items = {
 		"RNGModifier_Default_One_Item",
-		"RNGModifier_number_4_use_0",
-		"RNGModifier_number_4_use_1",
-		"RNGModifier_number_4_use_2",
-		"RNGModifier_number_4_use_3",
-		"RNGModifier_number_4_use_4",
-		"RNGModifier_number_4_use_5",
-		"RNGModifier_number_4_use_6",
-		"RNGModifier_number_4_use_7",
-		"RNGModifier_number_4_use_8",
-		"RNGModifier_number_4_use_9"
-		
+		"RNGModifier_chas_notepad_1",
+		"RNGModifier_chas_notepad_2"
 	},
-	value = RNGModifier:SafeGetData("chas", "_notepad_2_2nd"),
+	value = RNGModifier:SafeGetData("chas", "_notepad_2nd"),
 	menu_id = "RNGModifier_chas_Options_Menu"
 })
 
-MenuCallbackHandler.RNGModifier_chas_notepad_2_3rd = function(self, item)
-	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_notepad_2_3rd")
-	RNGModifier:Save()
-end
-MenuHelper:AddMultipleChoice({
-	priority = 22,
-	id = "RNGModifier_chas_notepad_2_3rd",
-	title = "RNGModifier_chas_notepad_2_3rd_title",
-	desc = "RNGModifier_empty_desc",
-	callback = "RNGModifier_chas_notepad_2_3rd",
-	items = {
-		"RNGModifier_Default_One_Item",
-		"RNGModifier_number_4_use_0",
-		"RNGModifier_number_4_use_1",
-		"RNGModifier_number_4_use_2",
-		"RNGModifier_number_4_use_3",
-		"RNGModifier_number_4_use_4",
-		"RNGModifier_number_4_use_5",
-		"RNGModifier_number_4_use_6",
-		"RNGModifier_number_4_use_7",
-		"RNGModifier_number_4_use_8",
-		"RNGModifier_number_4_use_9"
-		
-	},
-	value = RNGModifier:SafeGetData("chas", "_notepad_2_3rd"),
-	menu_id = "RNGModifier_chas_Options_Menu"
-})
 
-MenuCallbackHandler.RNGModifier_chas_notepad_2_4th = function(self, item)
-	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_notepad_2_4th")
-	RNGModifier:Save()
-end
-MenuHelper:AddMultipleChoice({
-	priority = 21,
-	id = "RNGModifier_chas_notepad_2_4th",
-	title = "RNGModifier_chas_notepad_2_4th_title",
-	desc = "RNGModifier_empty_desc",
-	callback = "RNGModifier_chas_notepad_2_4th",
-	items = {
-		"RNGModifier_Default_One_Item",
-		"RNGModifier_number_4_use_0",
-		"RNGModifier_number_4_use_1",
-		"RNGModifier_number_4_use_2",
-		"RNGModifier_number_4_use_3",
-		"RNGModifier_number_4_use_4",
-		"RNGModifier_number_4_use_5",
-		"RNGModifier_number_4_use_6",
-		"RNGModifier_number_4_use_7",
-		"RNGModifier_number_4_use_8",
-		"RNGModifier_number_4_use_9"
-		
-	},
-	value = RNGModifier:SafeGetData("chas", "_notepad_2_4th"),
-	menu_id = "RNGModifier_chas_Options_Menu"
-})
-
-MenuCallbackHandler.RNGModifier_chas_notepad_1_1st = function(self, item)
-	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_notepad_1_1st")
+MenuCallbackHandler.RNGModifier_chas_notepad_1st = function(self, item)
+	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_notepad_1st")
 	RNGModifier:Save()
 end
 MenuHelper:AddMultipleChoice({
 	priority = 28,
-	id = "RNGModifier_chas_notepad_1_1st",
-	title = "RNGModifier_chas_notepad_1_1st_title",
+	id = "RNGModifier_chas_notepad_1st",
+	title = "RNGModifier_chas_notepad_1st_title",
 	desc = "RNGModifier_empty_desc",
-	callback = "RNGModifier_chas_notepad_1_1st",
+	callback = "RNGModifier_chas_notepad_1st",
 	items = {
 		"RNGModifier_Default_One_Item",
-		"RNGModifier_number_4_use_0",
-		"RNGModifier_number_4_use_1",
-		"RNGModifier_number_4_use_2",
-		"RNGModifier_number_4_use_3",
-		"RNGModifier_number_4_use_4",
-		"RNGModifier_number_4_use_5",
-		"RNGModifier_number_4_use_6",
-		"RNGModifier_number_4_use_7",
-		"RNGModifier_number_4_use_8",
-		"RNGModifier_number_4_use_9"
+		"RNGModifier_chas_notepad_1",
+		"RNGModifier_chas_notepad_2"
 		
 	},
-	value = RNGModifier:SafeGetData("chas", "_notepad_1_1st"),
+	value = RNGModifier:SafeGetData("chas", "_notepad_1st"),
 	menu_id = "RNGModifier_chas_Options_Menu"
-})
+})]]
 
-MenuCallbackHandler.RNGModifier_chas_notepad_1_2nd = function(self, item)
-	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_notepad_1_2nd")
+MenuCallbackHandler.RNGModifier_chas_notepad_code = function(self, item)
+	if tostring(item:value()) == "on" then
+		RNGModifier:SafeSetData(1, _Current_Heist, "_notepad_code")
+	else
+		RNGModifier:SafeSetData(0, _Current_Heist, "_notepad_code")
+	end
 	RNGModifier:Save()
 end
-MenuHelper:AddMultipleChoice({
-	priority = 27,
-	id = "RNGModifier_chas_notepad_1_2nd",
-	title = "RNGModifier_chas_notepad_1_2nd_title",
+MenuHelper:AddToggle({
+	priority = 28,
+	id = "RNGModifier_chas_notepad_code",
+	title = "RNGModifier_chas_notepad_code_title",
 	desc = "RNGModifier_empty_desc",
-	callback = "RNGModifier_chas_notepad_1_2nd",
-	items = {
-		"RNGModifier_Default_One_Item",
-		"RNGModifier_number_4_use_0",
-		"RNGModifier_number_4_use_1",
-		"RNGModifier_number_4_use_2",
-		"RNGModifier_number_4_use_3",
-		"RNGModifier_number_4_use_4",
-		"RNGModifier_number_4_use_5",
-		"RNGModifier_number_4_use_6",
-		"RNGModifier_number_4_use_7",
-		"RNGModifier_number_4_use_8",
-		"RNGModifier_number_4_use_9"
-		
-	},
-	value = RNGModifier:SafeGetData("chas", "_notepad_1_2nd"),
-	menu_id = "RNGModifier_chas_Options_Menu"
-})
-
-MenuCallbackHandler.RNGModifier_chas_notepad_1_3rd = function(self, item)
-	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_notepad_1_3rd")
-	RNGModifier:Save()
-end
-MenuHelper:AddMultipleChoice({
-	priority = 26,
-	id = "RNGModifier_chas_notepad_1_3rd",
-	title = "RNGModifier_chas_notepad_1_3rd_title",
-	desc = "RNGModifier_empty_desc",
-	callback = "RNGModifier_chas_notepad_1_3rd",
-	items = {
-		"RNGModifier_Default_One_Item",
-		"RNGModifier_number_4_use_0",
-		"RNGModifier_number_4_use_1",
-		"RNGModifier_number_4_use_2",
-		"RNGModifier_number_4_use_3",
-		"RNGModifier_number_4_use_4",
-		"RNGModifier_number_4_use_5",
-		"RNGModifier_number_4_use_6",
-		"RNGModifier_number_4_use_7",
-		"RNGModifier_number_4_use_8",
-		"RNGModifier_number_4_use_9"
-		
-	},
-	value = RNGModifier:SafeGetData("chas", "_notepad_1_3rd"),
-	menu_id = "RNGModifier_chas_Options_Menu"
-})
-
-MenuCallbackHandler.RNGModifier_chas_notepad_1_4th = function(self, item)
-	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_notepad_1_4th")
-	RNGModifier:Save()
-end
-MenuHelper:AddMultipleChoice({
-	priority = 25,
-	id = "RNGModifier_chas_notepad_1_4th",
-	title = "RNGModifier_chas_notepad_1_4th_title",
-	desc = "RNGModifier_empty_desc",
-	callback = "RNGModifier_chas_notepad_1_4th",
-	items = {
-		"RNGModifier_Default_One_Item",
-		"RNGModifier_number_4_use_0",
-		"RNGModifier_number_4_use_1",
-		"RNGModifier_number_4_use_2",
-		"RNGModifier_number_4_use_3",
-		"RNGModifier_number_4_use_4",
-		"RNGModifier_number_4_use_5",
-		"RNGModifier_number_4_use_6",
-		"RNGModifier_number_4_use_7",
-		"RNGModifier_number_4_use_8",
-		"RNGModifier_number_4_use_9"
-		
-	},
-	value = RNGModifier:SafeGetData("chas", "_notepad_1_4th"),
-	menu_id = "RNGModifier_chas_Options_Menu"
+	callback = "RNGModifier_chas_notepad_code",
+	value = tonumber(RNGModifier:SafeGetData(_Current_Heist, "_notepad_code")) == 1,
+	menu_id = "RNGModifier_" .. _Current_Heist .. "_Options_Menu"
 })
 
 MenuCallbackHandler.RNGModifier_chas_crowbar_auction = function(self, item)

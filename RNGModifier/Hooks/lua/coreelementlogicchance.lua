@@ -57,11 +57,10 @@ function ElementLogicChance:on_executed(...)
 			end
 		elseif _level_id == "family" then
 			if self._id == 104842 then
-				local _chance_of_door = RNGModifier:SafeGetData(_level_id, "_chance_of_door") or 0
-				_chance_of_door = _chance_of_door - 1
-				if _chance_of_door == 1 then
+				local _chance_of_door = GetCheckboxValue(_level_id, "_chance_of_door")
+				if _chance_of_door then
 					self._chance = 999
-				elseif _chance_of_door == 2 then
+				else
 					self._chance = -999
 				end
 			end
@@ -372,13 +371,13 @@ function ElementLogicChance:on_executed(...)
 				log(_id_fix2)
 			end ]]--
 			if self._id == 104977 then
-				local _chance_boat_or_truck = RNGModifier:SafeGetData(_level_id, "_chance_boat_or_truck") or 0
-				if _chance_boat_or_truck > 0 then
+				local _chance_boat_or_truck = GetCheckboxValue(_level_id, "_chance_boat_or_truck")
+				if _chance_boat_or_truck then
 					self._chance = 100
 				end
 			elseif self._editor_name == "chance_easy" or self._editor_name == "chance_hard" or self._editor_name == "chance_ovkdw" then
-				local _chance_for_hack = RNGModifier:SafeGetData(_level_id, "_chance_for_hack") or 0
-				if _chance_for_hack > 0 then
+				local _chance_for_hack = GetCheckboxValue(_level_id, "_chance_for_hack")
+				if _chance_for_hack then
 					self._chance = -999
 				end
 			end
