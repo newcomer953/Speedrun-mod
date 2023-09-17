@@ -116,14 +116,18 @@ function ElementLogicChance:on_executed(...)
 			end
 		elseif _level_id == "alex_2" then
 			if self._id == 104515 then
-				local _chance_of_fbi_interrupt = RNGModifier:SafeGetData(_level_id, "_chance_of_fbi_interrupt") or 0
-				_chance_of_fbi_interrupt = _chance_of_fbi_interrupt - 1
-				if _chance_of_fbi_interrupt <= 0 then 
-				
-				elseif _chance_of_fbi_interrupt == 1 then 
+				local _chance_of_fbi_interrupt = GetCheckboxValue(_level_id, "_chance_of_fbi_interrupt")
+				if _chance_of_fbi_interrupt then 
 					self._chance = 999
-				elseif _chance_of_fbi_interrupt == 2 then 
+				else
 					self._chance = -999
+				end
+			elseif self._id == 100338 then
+				local _no_escape = GetCheckboxValue(_level_id, "_no_escape")
+				if _no_escape then
+					self._chance = 0
+				else
+					self._chance = 100
 				end
 			end
 		elseif _level_id == "roberts" then
@@ -724,8 +728,13 @@ function ElementLogicChance:on_executed(...)
 				if _no_cooking_delay then
 					self._chance = 100
 				end
+			elseif self._id == 101440 then
+				local _no_escape = GetCheckboxValue(_level_id, "_no_escape")
+				if _no_escape then
+					self._chance = 0
+				end
 			end
-		
+			
 		elseif _level_id == "crojob2" then
 			if self._id == 100484 or self._id == 100526 or self._id == 100510 or self._id == 100533 then
 				local _open_doors = GetCheckboxValue(_level_id, "_open_doors")

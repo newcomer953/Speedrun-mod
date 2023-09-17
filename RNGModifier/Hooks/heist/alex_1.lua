@@ -93,6 +93,24 @@ MenuHelper:AddToggle({
 	menu_id = "RNGModifier_" .. _Current_Heist .. "_Options_Menu"
 })
 
+MenuCallbackHandler.RNGModifier_alex_1_no_escape = function(self, item)
+	if tostring(item:value()) == "on" then
+		RNGModifier:SafeSetData(1, _Current_Heist, "_no_escape")
+	else
+		RNGModifier:SafeSetData(0, _Current_Heist, "_no_escape")
+	end
+	RNGModifier:Save()
+end
+MenuHelper:AddToggle({
+	priority = GetPriority(),
+	id = "RNGModifier_alex_1_no_escape",
+	title = "RNGModifier_alex_1_no_escape_title",
+	desc = "RNGModifier_empty_desc",
+	callback = "RNGModifier_alex_1_no_escape",
+	value = tonumber(RNGModifier:SafeGetData(_Current_Heist, "_no_escape")) == 1,
+	menu_id = "RNGModifier_" .. _Current_Heist .. "_Options_Menu"
+})
+
 MenuCallbackHandler.RNGModifier_alex_1_best_ingredients = function(self, item)
 	if tostring(item:value()) == "on" then
 		RNGModifier:SafeSetData(1, _Current_Heist, "_best_ingredients")
