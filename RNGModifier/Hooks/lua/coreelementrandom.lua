@@ -2108,6 +2108,18 @@ function ElementRandom:_get_random_elements()
 				rand = PickRandomFromList(rand, "_panel_3")
 			elseif self._id == 138776 then
 				rand = PickRandomFromList(rand, "_panel_4")
+			--[[elseif self._editor_name == "Pick Panel" and self._values.instance_name and self._values.instance_name:find("train_int_murky_emp_00") then
+				local _panel_1 = (RNGModifier:SafeGetData(_level_id, "_panel_1") or 0) - 1
+				local _panel_2 = (RNGModifier:SafeGetData(_level_id, "_panel_2") or 0) - 1
+				local _panel_3 = (RNGModifier:SafeGetData(_level_id, "_panel_3") or 0) - 1
+				local _panel_4 = (RNGModifier:SafeGetData(_level_id, "_panel_4") or 0) - 1
+				
+				for i, choice in ipairs(self._unused_randoms) do
+					if choice == _panel_1 or choice == _panel_2 or choice == _panel_3 or choice == _panel_4 then
+						rand = i
+						break
+					end
+				end]]
 			--[[elseif table.contains({105905,105906,105907,105908,105909,105910,105911}, self._id) then
 				rand = PickRandomFromList(rand, "_lock_emp")
 			elseif table.contains({105918,105919,105920,105921,105922,105923,105924}, self._id) then
