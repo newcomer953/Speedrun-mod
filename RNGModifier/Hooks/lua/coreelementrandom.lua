@@ -2108,10 +2108,10 @@ function ElementRandom:_get_random_elements()
 				rand = PickRandomFromList(rand, "_panel_3")
 			elseif self._id == 138776 then
 				rand = PickRandomFromList(rand, "_panel_4")
-			elseif table.contains({105905,105906,105907,105908,105909,105910,105911}, self._id) then
+			--[[elseif table.contains({105905,105906,105907,105908,105909,105910,105911}, self._id) then
 				rand = PickRandomFromList(rand, "_lock_emp")
 			elseif table.contains({105918,105919,105920,105921,105922,105923,105924}, self._id) then
-				rand = PickRandomFromList(rand, "_lock_emp_2nd")
+				rand = PickRandomFromList(rand, "_lock_emp_2nd")]]
 			elseif self._id == 101497 then
 				rand = PickRandomFromList(rand, "_pick_thermite_upper")
 			elseif self._id == 100664 then
@@ -2132,9 +2132,20 @@ function ElementRandom:_get_random_elements()
 				rand = PickRandomFromList(rand, "_fence_spawn")
 			elseif self._id == 106097 then
 				rand = PickRandomFromList(rand, "_fence_back")
+			elseif self._editor_name == "pick_bomb" and self._values.instance_name and self._values.instance_name:find("train_int_murky_emp_00") then
+				local _pick_bomb1 = (RNGModifier:SafeGetData(_level_id, "_pick_bomb1") or 0) - 1
+				local _pick_bomb2 = (RNGModifier:SafeGetData(_level_id, "_pick_bomb2") or 0) - 1
+				
+				for i, choice in ipairs(self._unused_randoms) do
+					if choice == _pick_bomb1 or choice == _pick_bomb2 then
+						rand = i
+						break
+					end
+				end
+				--rand = GetIndexFromChoice(PickRandomFromList(rand, "_pick_bomb"))
 			end	
 			
-			--[[local _test = RNGModifier:SafeGetData(_level_id, "_test") or 0
+			local _test = RNGModifier:SafeGetData(_level_id, "_test") or 0
 			_test = _test - 1
 			if _test > 0 then
 				local _id_fix = self._id
@@ -2143,7 +2154,7 @@ function ElementRandom:_get_random_elements()
 				log(_id_fix)
 				log(_id_fix1)
 				log(_id_fix2)
-			end]]
+			end
 			
 		elseif _level_id == "kenaz" then
 			if self._id == 100145 then
