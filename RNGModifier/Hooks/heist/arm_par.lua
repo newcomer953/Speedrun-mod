@@ -17,7 +17,10 @@ MenuHelper:AddMultipleChoice({
 	callback = "RNGModifier_arm_par_rand_truck_amount",
 	items = {
 		"RNGModifier_Default_One_Item",
-		"RNGModifier_number_4_use_3"
+		"RNGModifier_number_4_use_3",
+		"RNGModifier_number_4_use_2",
+		"RNGModifier_number_4_use_1",
+		"RNGModifier_number_4_use_4"
 	},
 	value = RNGModifier:SafeGetData("arm_par", "_rand_truck_amount"),
 	menu_id = "RNGModifier_arm_par_Options_Menu"
