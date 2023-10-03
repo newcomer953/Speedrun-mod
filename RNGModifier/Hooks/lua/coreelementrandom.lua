@@ -3659,6 +3659,8 @@ function ElementRandom:_get_random_elements()
 					local broken_pallet_offset = {1,1,2,2,3,3,4,4,5,5}
 					broken_pallet = broken_pallet_offset[broken_pallet]
 					rand = GetIndexFromChoice(broken_pallet)
+				else
+					rand = self._unused_randoms
 				end
 			elseif self._id == 100266 then
 				local broken_pallet = GetMultipleChoiceValue(_level_id, "_broken_pallet")
