@@ -2163,6 +2163,77 @@
 	"RNGModifier_pbr2_escape_3": "NE",
 	"RNGModifier_pbr2_escape_4": "SE",
 	
+	"RNGModifier_bph_thermite_title": "Thermite",
+	"RNGModifier_bph_thermite_1": "Corner",
+	"RNGModifier_bph_thermite_2": "Back",
+	"RNGModifier_bph_thermite_3": "Mid",
+	
+	"RNGModifier_bph_bain_title": "Bain cell",
+	"RNGModifier_bph_bain_1": "405",
+	"RNGModifier_bph_bain_2": "402",
+	"RNGModifier_bph_bain_3": "406",
+	"RNGModifier_bph_bain_4": "409",
+	
+	"RNGModifier_bph_l_or_c_title": "Laundry or Canteen",
+	"RNGModifier_bph_l_or_c_1": "Laundry",
+	"RNGModifier_bph_l_or_c_2": "Canteen",
+	
+	"RNGModifier_bph_hackbox_title": "Hackbox",
+	"RNGModifier_bph_hackbox_1": "Balcony",
+	"RNGModifier_bph_hackbox_2": "Beginning #1",
+	"RNGModifier_bph_hackbox_3": "Near Balcony #1",
+	"RNGModifier_bph_hackbox_4": "Beginning #2",
+	"RNGModifier_bph_hackbox_5": "Mid",
+	"RNGModifier_bph_hackbox_6": "Back #1",
+	"RNGModifier_bph_hackbox_7": "Back #2",
+	
+	"RNGModifier_dinner_keycard_title": "Keycard",
+	"RNGModifier_dinner_keycard_1": "Upstair Backroom #1",
+	"RNGModifier_dinner_keycard_2": "WC UPSTAIR",
+	"RNGModifier_dinner_keycard_3": "Upstair Backroom #2",
+	"RNGModifier_dinner_keycard_4": "UPSTAIR PIG AREA",
+	"RNGModifier_dinner_keycard_5": "COPY MACHINE UPSTAIR",
+	"RNGModifier_dinner_keycard_6": "DOWNSTAIR PIG AREA",
+	"RNGModifier_dinner_keycard_7": "LOCKER ROOM #1",
+	"RNGModifier_dinner_keycard_8": "SIDE ROOM DOWNSTAIR",
+	
+	"RNGModifier_dinner_gascan_1_title": "GASCAN #1",
+	"RNGModifier_dinner_gascan_2_title": "GASCAN #2",
+	"RNGModifier_dinner_gascan_3_title": "GASCAN #3",
+	"RNGModifier_dinner_gascan_4_title": "GASCAN #4",
+	"RNGModifier_dinner_gascan_1": "FIRST CONVEYOR BELT",
+	"RNGModifier_dinner_gascan_2": "DOWNSTAIR PIG AREA",
+	"RNGModifier_dinner_gascan_3": "CORNER IN SLAUGHTER AREA",
+	"RNGModifier_dinner_gascan_4": "ENTRANCE",
+	"RNGModifier_dinner_gascan_5": "NEXT TO BARREL IN SLAUGHTER AREA",
+	"RNGModifier_dinner_gascan_6": "2F HALLWAY #1",
+	"RNGModifier_dinner_gascan_7": "2F HALLWAY #2",
+	"RNGModifier_dinner_gascan_8": "FIRST CONVEYOR BELT ROOM",	
+	
+	"RNGModifier_dinner_escape_title": "ESCAPE",
+	"RNGModifier_dinner_escape_1": "MID",
+	"RNGModifier_dinner_escape_2": "RIGHT",
+	"RNGModifier_dinner_escape_3": "LEFT",
+	
+	"RNGModifier_nmh_best_cameras_title": "BEST CAMERA",
+	
+	"RNGModifier_nmh_correct_paper_title": "CORRECT PAPER?",
+	
+	"RNGModifier_nmh_phone_title": "NO PHONE EVENT",
+	
+	"RNGModifier_nmh_patient_title": "PATIENT",
+	"RNGModifier_nmh_patient_1": "A",
+	"RNGModifier_nmh_patient_2": "B",
+	"RNGModifier_nmh_patient_3": "C",
+	
+	"RNGModifier_nmh_blood_chance_title": "VALIDATION CHANCE",
+	
+	"RNGModifier_nmh_box_title": "Power outage near elevator",
+	
+	"RNGModifier_nmh_escape_title": "Escape",
+	"RNGModifier_nmh_escape_1": "GARAGE",
+	"RNGModifier_nmh_escape_2": "ROOF",
+	
 	"RNGModifier_wwh_random_captain_location_title" : "Captain",
 	"RNGModifier_wwh_random_captain_location_1" : "Near Train",
 	"RNGModifier_wwh_random_captain_location_2" : "Other",

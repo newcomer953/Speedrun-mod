@@ -60,8 +60,7 @@ function ElementLogicChance:on_executed(...)
 				local _chance_of_door = GetCheckboxValue(_level_id, "_chance_of_door")
 				if _chance_of_door then
 					self._chance = 999
-				else
-					self._chance = -999
+				
 				end
 			end
 		elseif _level_id == "glace" then
@@ -119,15 +118,32 @@ function ElementLogicChance:on_executed(...)
 				local _chance_of_fbi_interrupt = GetCheckboxValue(_level_id, "_chance_of_fbi_interrupt")
 				if _chance_of_fbi_interrupt then 
 					self._chance = 999
-				else
-					self._chance = -999
+				
 				end
 			elseif self._id == 100338 then
 				local _no_escape = GetCheckboxValue(_level_id, "_no_escape")
 				if _no_escape then
 					self._chance = 0
-				else
-					self._chance = 100
+				
+				end
+			end
+		elseif _level_id == "nmh" then
+			if self._id == 103011 then
+				local _correct_paper = GetCheckboxValue(_level_id, "_correct_paper")
+				if _correct_paper then 
+					self._chance = 999
+				end
+			elseif self._id == 103011 then
+				local _escape = (RNGModifier:SafeGetData(_level_id, "_escape") or 0) - 1
+				if _escape == 1 then 
+					self._chance = 999
+				elseif _escape == 2 then
+					self._chance == -999
+				end
+			elseif self._editor_name == "chance_28" and self._values.instance_name and self._values.instance_name:find("nmh_fuge_00") then
+				local _blood_chance = GetCheckboxValue(_level_id, "_blood_chance")
+				if _blood_chance then 
+					self._chance = 999
 				end
 			end
 		elseif _level_id == "roberts" then
@@ -276,8 +292,7 @@ function ElementLogicChance:on_executed(...)
 				local _wall = GetCheckboxValue(_level_id, "_wall")
 				if _wall then
 					self._chance = 0
-				else
-					self._chance = 100
+				
 				end
 			end
 		elseif _level_id == "jolly" then
@@ -635,24 +650,20 @@ function ElementLogicChance:on_executed(...)
 				local _gate = GetCheckboxValue(_level_id, "_gate")
 				if _gate then
 					self._chance = 0
-				else
-					self._chance = 100
+				
 				end
 			elseif self._id == 103300 then
 				local _heli = GetCheckboxValue(_level_id, "_heli")
 				if _heli then
 					self._chance = 0
-				else
-					self._chance = 100
+				
 				end
 			end
 		elseif _level_id == "four_stores" then
 			if self._id == 102550 or self._id == 102089 then
 				local _ATM = GetCheckboxValue(_level_id, "_ATM")
 				if _ATM then
-					self._chance = 0
-				else
-					self._chance = 100
+					self._chance = 0				
 				end
 			end
 		elseif _level_id == "hox_2" then

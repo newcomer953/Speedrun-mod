@@ -3774,7 +3774,82 @@ function ElementRandom:_get_random_elements()
 			elseif self._id == 101786 then
 				rand = PickRandomFromList(rand,"_limo")
 			end
+		
+		elseif _level_id == "bph" then
+			if self._id == 100010 then
+				rand = PickRandomFromList(rand, "_thermite")
+			elseif self._id == 101265 then
+				rand = PickRandomFromList(rand, "_bain")
+			elseif self._id == 101389 then
+				rand = PickRandomFromList(rand, "_l_or_c")
+			elseif self._id == 103388 then
+				rand = PickRandomFromList(rand, "_hackbox")
+			end
+		
+		elseif _level_id == "dinner" then
+			if self._id == 105038 then
+				rand = PickRandomFromList(rand, "_keycard")
+			elseif self._id == 100846 or self._id == 103179 then
+				local gascan_1 = (RNGModifier:SafeGetData(_level_id, "_gascan_1") or 0) - 1
+				local gascan_2 = (RNGModifier:SafeGetData(_level_id, "_gascan_2") or 0) - 1
+				local gascan_3 = (RNGModifier:SafeGetData(_level_id, "_gascan_3") or 0) - 1
+				local gascan_4 = (RNGModifier:SafeGetData(_level_id, "_gascan_4") or 0) - 1
+				
+				for i, choice in ipairs(self._unused_randoms) do
+					if choice == gascan_1 or choice == gascan_2 or choice == gascan_3 or choice == gascan_4 then
+						rand = i
+						break
+					end
+				end
+			elseif self._id == 102710 then
+				rand = PickRandomFromList(rand, "_escape")
+			end
+		
+		elseif _level_id == "nmh" then
+			if self._id == 102452 then
+				_tmp_data[_level_id] = _tmp_data[_level_id] or {}
 			
+				if not _tmp_data[_level_id].camera_normal then
+					_tmp_data[_level_id].camera_normal = {}
+					local best_cameras = GetCheckboxValue(_level_id, "_best_cameras")
+					if best_cameras then
+						_tmp_data[_level_id].camera_normal = {20,2,13,12,7,4,19,8,5,16,11,15,3,6,14,1,10}
+					end
+				end
+				
+				if _tmp_data[_level_id].camera_normal and #_tmp_data[_level_id].camera_normal > 0 then
+					local _camera = table.remove(_tmp_data[_level_id].camera_normal, 1)
+					rand = GetIndexFromChoice(_camera)
+				end
+			elseif self._id == 102454 then
+				_tmp_data[_level_id] = _tmp_data[_level_id] or {}
+			
+				if not _tmp_data[_level_id].camera_dw then
+					_tmp_data[_level_id].camera_dw = {}
+					local best_cameras = GetCheckboxValue(_level_id, "_best_cameras")
+					if best_cameras then
+						_tmp_data[_level_id].camera_dw = {19,8,15,17,20,18,5,7,6,10,11}
+					end
+				end
+				
+				if _tmp_data[_level_id].camera_dw and #_tmp_data[_level_id].camera_dw > 0 then
+					local _camera = table.remove(_tmp_data[_level_id].camera_dw, 1)
+					rand = GetIndexFromChoice(_camera)
+				end
+			elseif self._id == 103762 then
+				local _phone = GetCheckboxValue(_level_id, "_phone")
+				if _phone then
+					rand = 1
+				end
+			elseif self._id == 102309 then
+				rand = PickRandomFromList(rand, "_patient")
+			elseif self._id == 103468 then
+				local _box = GetCheckboxValue(_level_id, "_box")
+				if _box then
+					rand = 1
+				end
+			end
+		
 		elseif _level_id == "election_day_1" then
 			if self._id == 100631 then
 				rand = PickRandomFromList(rand, "_truck")
