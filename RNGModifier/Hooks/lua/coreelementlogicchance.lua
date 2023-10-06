@@ -123,8 +123,7 @@ function ElementLogicChance:on_executed(...)
 			elseif self._id == 100338 then
 				local _no_escape = GetCheckboxValue(_level_id, "_no_escape")
 				if _no_escape then
-					self._chance = 0
-				
+					self._chance = 0			
 				end
 			end
 		elseif _level_id == "nmh" then
@@ -138,7 +137,7 @@ function ElementLogicChance:on_executed(...)
 				if _escape == 1 then 
 					self._chance = 999
 				elseif _escape == 2 then
-					self._chance == -999
+					self._chance = -999
 				end
 			elseif self._editor_name == "chance_28" and self._values.instance_name and self._values.instance_name:find("nmh_fuge_00") then
 				local _blood_chance = GetCheckboxValue(_level_id, "_blood_chance")
