@@ -585,7 +585,7 @@ MenuHelper:AddMultipleChoice({
 	menu_id = "RNGModifier_dark_Options_Menu"
 })
 
-MenuCallbackHandler.RNGModifier_dark_test = function(self, item)
+--[[MenuCallbackHandler.RNGModifier_dark_test = function(self, item)
 	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_test")
 	RNGModifier:Save()
 end
@@ -601,7 +601,7 @@ MenuHelper:AddMultipleChoice({
 	},
 	value = RNGModifier:SafeGetData("dark", "_test"),
 	menu_id = "RNGModifier_dark_Options_Menu"
-})
+})]]
 
 --[[MenuCallbackHandler.RNGModifier_dark_train_A = function(self, item)
 	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_train_A")

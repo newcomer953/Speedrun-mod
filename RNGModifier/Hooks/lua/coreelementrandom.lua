@@ -2113,6 +2113,8 @@ function ElementRandom:_get_random_elements()
 				rand = PickRandomFromList(rand, "_panel_3")
 			elseif self._id == 138776 then
 				rand = PickRandomFromList(rand, "_panel_4")
+			elseif self._editor_name:find("random_emp_train_position_00") then
+				rand = 2
 			--[[elseif self._editor_name == "Pick Panel" and self._values.instance_name and self._values.instance_name:find("train_int_murky_emp_00") then
 				local _panel_1 = (RNGModifier:SafeGetData(_level_id, "_panel_1") or 0) - 1
 				local _panel_2 = (RNGModifier:SafeGetData(_level_id, "_panel_2") or 0) - 1
@@ -2162,7 +2164,7 @@ function ElementRandom:_get_random_elements()
 				--rand = GetIndexFromChoice(PickRandomFromList(rand, "_pick_bomb"))
 			end	
 			
-			local _test = RNGModifier:SafeGetData(_level_id, "_test") or 0
+			--[[local _test = RNGModifier:SafeGetData(_level_id, "_test") or 0
 			_test = _test - 1
 			if _test > 0 then
 				local _id_fix = self._id
@@ -2171,7 +2173,7 @@ function ElementRandom:_get_random_elements()
 				log(_id_fix)
 				log(_id_fix1)
 				log(_id_fix2)
-			end
+			end]]
 			
 		elseif _level_id == "kenaz" then
 			if self._id == 100145 then
