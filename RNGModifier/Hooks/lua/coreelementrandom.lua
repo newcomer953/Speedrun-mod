@@ -2105,7 +2105,23 @@ function ElementRandom:_get_random_elements()
 			elseif self._id == 105797 then
 				local _pick_murky_train_2 = (RNGModifier:SafeGetData(_level_id, "_pick_murky_train_2") or 0) - 1
 				if _pick_murky_train_2 > 0 then rand = GetIndexFromChoice(_pick_murky_train_2) end
-			elseif self._id == 166551 then
+			elseif self._id >= 105905 and self._id <= 105911 then
+				--Blowtorch Train Rotation, 1/2 = Normal/Rotate 180
+				rand = 1
+			elseif self._id >= 105918 and self._id <= 105924 then
+				--Keycard Train Rotation, 1/2 = Normal/Rotate 180
+				rand = 1
+			elseif self._editor_name == "Pick Panel" and self._values.instance_name and self._values.instance_name:find("train_int_murky_emp_00") then
+				if self._values.instance_name == "train_int_murky_emp_001" then
+					rand = GetIndexFromChoice(GetMultipleChoiceValue(_level_id, "_panel_1"))
+				elseif self._values.instance_name == "train_int_murky_emp_002" then
+					rand = GetIndexFromChoice(GetMultipleChoiceValue(_level_id, "_panel_2"))
+				elseif self._values.instance_name == "train_int_murky_emp_003" then
+					rand = GetIndexFromChoice(GetMultipleChoiceValue(_level_id, "_panel_3"))
+				elseif self._values.instance_name == "train_int_murky_emp_004" then
+					rand = GetIndexFromChoice(GetMultipleChoiceValue(_level_id, "_panel_4"))
+				end
+			--[[elseif self._id == 166551 then
 				rand = PickRandomFromList(rand, "_panel_1")
 			elseif self._id == 163551 then
 				rand = PickRandomFromList(rand, "_panel_2")
@@ -2114,7 +2130,7 @@ function ElementRandom:_get_random_elements()
 			elseif self._id == 138776 then
 				rand = PickRandomFromList(rand, "_panel_4")
 			elseif self._editor_name:find("random_emp_train_position_00") then
-				rand = 2
+				rand = 2]]
 			--[[elseif self._editor_name == "Pick Panel" and self._values.instance_name and self._values.instance_name:find("train_int_murky_emp_00") then
 				local _panel_1 = (RNGModifier:SafeGetData(_level_id, "_panel_1") or 0) - 1
 				local _panel_2 = (RNGModifier:SafeGetData(_level_id, "_panel_2") or 0) - 1
