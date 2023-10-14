@@ -2107,10 +2107,10 @@ function ElementRandom:_get_random_elements()
 				if _pick_murky_train_2 > 0 then rand = GetIndexFromChoice(_pick_murky_train_2) end
 			elseif self._id >= 105905 and self._id <= 105911 then
 				--Blowtorch Train Rotation, 1/2 = Normal/Rotate 180
-				rand = 1
+				rand = PickRandomFromList(rand, "_lock_emp")
 			elseif self._id >= 105918 and self._id <= 105924 then
 				--Keycard Train Rotation, 1/2 = Normal/Rotate 180
-				rand = 1
+				rand = PickRandomFromList(rand, "_lock_emp_2nd")
 			elseif self._editor_name == "Pick Panel" and self._values.instance_name and self._values.instance_name:find("train_int_murky_emp_00") then
 				if self._values.instance_name == "train_int_murky_emp_001" then
 					rand = GetIndexFromChoice(GetMultipleChoiceValue(_level_id, "_panel_1"))
@@ -3821,6 +3821,30 @@ function ElementRandom:_get_random_elements()
 				end
 			elseif self._id == 102710 then
 				rand = PickRandomFromList(rand, "_escape")
+			elseif self._id == 104485 then
+				rand = PickRandomFromList(rand, "_escape001")
+			elseif self._id == 104653 then
+				rand = PickRandomFromList(rand, "_escape001_path1")
+			elseif self._id == 104654 then
+				rand = PickRandomFromList(rand, "_escape001_path2")
+			elseif self._id == 104660 then
+				rand = PickRandomFromList(rand, "_escape001_path3")
+			elseif self._id == 104656 then
+				rand = PickRandomFromList(rand, "_escape002")
+			elseif self._id == 104661 then
+				rand = PickRandomFromList(rand, "_escape002_path1")
+			elseif self._id == 104662 then
+				rand = PickRandomFromList(rand, "_escape002_path2")
+			elseif self._id == 104679 then
+				rand = PickRandomFromList(rand, "_escape002_path3")
+			elseif self._id == 104199 then
+				rand = PickRandomFromList(rand, "_escape003")
+			elseif self._id == 104228 then
+				rand = PickRandomFromList(rand, "_escape003_path1")
+			elseif self._id == 104227 then
+				rand = PickRandomFromList(rand, "_escape003_path2")
+			elseif self._id == 104229 then
+				rand = PickRandomFromList(rand, "_escape003_path3")
 			end
 		
 		elseif _level_id == "nmh" then

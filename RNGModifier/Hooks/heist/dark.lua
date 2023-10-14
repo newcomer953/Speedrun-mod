@@ -108,7 +108,7 @@ MenuCallbackHandler.RNGModifier_dark_panel_1 = function(self, item)
 	RNGModifier:Save()
 end
 MenuHelper:AddMultipleChoice({
-	priority = 15.1,
+	priority = 16.01,
 	id = "RNGModifier_dark_panel_1",
 	title = "RNGModifier_dark_panel_1_title",
 	desc = "RNGModifier_empty_desc",
@@ -127,7 +127,7 @@ MenuCallbackHandler.RNGModifier_dark_panel_2 = function(self, item)
 	RNGModifier:Save()
 end
 MenuHelper:AddMultipleChoice({
-	priority = 15,
+	priority = 16.02,
 	id = "RNGModifier_dark_panel_2",
 	title = "RNGModifier_dark_panel_2_title",
 	desc = "RNGModifier_empty_desc",
@@ -153,8 +153,8 @@ MenuHelper:AddMultipleChoice({
 	callback = "RNGModifier_dark_panel_3",
 	items = {
 		"RNGModifier_Default_One_Item",
-		"RNGModifier_dark_panel_1",
-		"RNGModifier_dark_panel_2"
+		"RNGModifier_number_4_use_1",
+		"RNGModifier_number_4_use_2"
 	},
 	value = RNGModifier:SafeGetData("dark", "_panel_3"),
 	menu_id = "RNGModifier_dark_Options_Menu"
@@ -179,7 +179,7 @@ MenuHelper:AddMultipleChoice({
 	menu_id = "RNGModifier_dark_Options_Menu"
 })
 
---[[MenuCallbackHandler.RNGModifier_dark_lock_emp = function(self, item)
+MenuCallbackHandler.RNGModifier_dark_lock_emp = function(self, item)
 	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_lock_emp")
 	RNGModifier:Save()
 end
@@ -203,7 +203,7 @@ MenuCallbackHandler.RNGModifier_dark_lock_emp_2nd = function(self, item)
 	RNGModifier:Save()
 end
 MenuHelper:AddMultipleChoice({
-	priority = 15.8,
+	priority = 15.86,
 	id = "RNGModifier_dark_lock_emp_2nd",
 	title = "RNGModifier_dark_lock_emp_2nd_title",
 	desc = "RNGModifier_empty_desc",
@@ -215,14 +215,14 @@ MenuHelper:AddMultipleChoice({
 	},
 	value = RNGModifier:SafeGetData("dark", "_lock_emp_2nd"),
 	menu_id = "RNGModifier_dark_Options_Menu"
-})]]
+})
 
 MenuCallbackHandler.RNGModifier_dark_pick_bomb1 = function(self, item)
 	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_pick_bomb1")
 	RNGModifier:Save()
 end
 MenuHelper:AddMultipleChoice({
-	priority = 15.8,
+	priority = 15.85,
 	id = "RNGModifier_dark_pick_bomb1",
 	title = "RNGModifier_dark_pick_bomb1_title",
 	desc = "RNGModifier_empty_desc",
@@ -241,7 +241,7 @@ MenuCallbackHandler.RNGModifier_dark_pick_bomb2 = function(self, item)
 	RNGModifier:Save()
 end
 MenuHelper:AddMultipleChoice({
-	priority = 15.8,
+	priority = 15.84,
 	id = "RNGModifier_dark_pick_bomb2",
 	title = "RNGModifier_dark_pick_bomb2_title",
 	desc = "RNGModifier_empty_desc",
