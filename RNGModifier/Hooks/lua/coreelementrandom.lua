@@ -4221,14 +4221,24 @@ function ElementRandom:_get_random_elements()
 				rand = GetIndexFromChoice(PickRandomFromList(rand,"_aqua"))				
 			elseif self._id == 100980 then
 				rand = GetIndexFromChoice(PickRandomFromList(rand,"_server_rack"))			
-			elseif self._id == 143273 then
+			--[[elseif self._id == 143273 then
 				rand = PickRandomFromList(rand,"_button4")
 			elseif self._id == 145073 then
 				rand = PickRandomFromList(rand,"_button3")
 			elseif self._id == 143073 then
 				rand = PickRandomFromList(rand,"_button2")
 			elseif self._id == 142873 then
-				rand = PickRandomFromList(rand,"_button1")
+				rand = PickRandomFromList(rand,"_button1")]]
+			elseif self._values.instance_name and self._values.instance_name:find("server_rack_00") and self._editor_name == "pick_random_button" then
+				if self._values.instance_name == "server_rack_001" then
+					rand = GetIndexFromChoice(GetMultipleChoiceValue(_level_id, "_button1"))
+				elseif self._values.instance_name == "server_rack_002" then
+					rand = GetIndexFromChoice(GetMultipleChoiceValue(_level_id, "_button2"))
+				elseif self._values.instance_name == "server_rack_003" then
+					rand = GetIndexFromChoice(GetMultipleChoiceValue(_level_id, "_button3"))
+				elseif self._values.instance_name == "server_rack_004" then
+					rand = GetIndexFromChoice(GetMultipleChoiceValue(_level_id, "_button4"))
+				end
 			elseif self._id == 140280 then
 				
 				local disable_money_A = (RNGModifier:SafeGetData(_level_id, "_disable_money_A") or 0) - 1

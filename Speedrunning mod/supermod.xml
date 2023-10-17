@@ -1,6 +1,6 @@
 <mod>
 	<hooks script_path="Hooks/">
-		<post script_path="Base.lua" hook_id="lib/managers/localizationmanager"/>
+		<!--<post script_path="Base.lua" hook_id="lib/managers/localizationmanager"/> -->
 
 		<group hook_id="lib/managers/" script_path="">
 			<post :hook_id="hudmanagerpd2" :script_path="hud.lua"/>
