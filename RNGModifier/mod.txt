@@ -62,7 +62,7 @@
   ],
   "updates": [
         {
-            "identifier": "RNGmod2",
+            "identifier": "rngmod",
             "host": {
 				"meta": "https://raw.githubusercontent.com/newcomer953/Speedrun-mod/main/RNGModifier/update/meta_rng.json"
 			}
