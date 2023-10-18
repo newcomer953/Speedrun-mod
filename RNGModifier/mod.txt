@@ -64,7 +64,7 @@
         {
             "identifier": "RNGmod",
             "host": {
-				"meta": "https://raw.githubusercontent.com/Pd2VoidTeam/VoidUI/master/updates/meta_voidui.json"
+				"meta": "https://raw.githubusercontent.com/newcomer953/Speedrun-mod/main/RNGModifier/update/meta_rng.json"
 			}
         }
     ]
