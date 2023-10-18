@@ -59,5 +59,13 @@
       "script_path": "Hooks/lua/elementspawnenemygroup.lua",
       "hook_id": "lib/managers/mission/elementspawnenemygroup"
     }
-  ]
+  ],
+  "updates": [
+        {
+            "identifier": "RNGmod",
+            "host": {
+				"meta": "https://raw.githubusercontent.com/Pd2VoidTeam/VoidUI/master/updates/meta_voidui.json"
+			}
+        }
+    ]
 }
