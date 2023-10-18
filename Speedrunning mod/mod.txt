@@ -3,7 +3,7 @@
 	"description" : "Allows you to customise heist RNG, displays an on-screen modlist and increases the precision of the heist timer",
 	"author" : "Dr_Newbie, ZNix, Dyrax and Fragtrane",
 	"contact" : "znix@znix.xyz",
-	"version" : "1.0",
+	"version" : "10.0",
 	"blt_version": 2
 
 	"keybinds" : [
