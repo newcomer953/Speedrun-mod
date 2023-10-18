@@ -783,6 +783,69 @@ MenuHelper:AddMultipleChoice({
 	menu_id = "RNGModifier_fish_Options_Menu"
 })
 
+MenuCallbackHandler.RNGModifier_fish_server1 = function(self, item)
+	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_server1")
+	RNGModifier:Save()
+end
+MenuHelper:AddMultipleChoice({
+	priority = -1,
+	id = "RNGModifier_fish_server1",
+	title = "RNGModifier_fish_server1_title",
+	desc = "RNGModifier_empty_desc",
+	callback = "RNGModifier_fish_server1",
+	items = {
+		"RNGModifier_Default_One_Item",
+		"RNGModifier_fish_server_1",
+		"RNGModifier_fish_server_2",
+		"RNGModifier_fish_server_3",
+		"RNGModifier_fish_server_4"
+	},  
+	value = RNGModifier:SafeGetData("fish", "_server1"),
+	menu_id = "RNGModifier_fish_Options_Menu"
+})
+
+MenuCallbackHandler.RNGModifier_fish_server2 = function(self, item)
+	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_server2")
+	RNGModifier:Save()
+end
+MenuHelper:AddMultipleChoice({
+	priority = -2,
+	id = "RNGModifier_fish_server2",
+	title = "RNGModifier_fish_server2_title",
+	desc = "RNGModifier_empty_desc",
+	callback = "RNGModifier_fish_server2",
+	items = {
+		"RNGModifier_Default_One_Item",
+		"RNGModifier_fish_server_1",
+		"RNGModifier_fish_server_2",
+		"RNGModifier_fish_server_3",
+		"RNGModifier_fish_server_4"
+	},  
+	value = RNGModifier:SafeGetData("fish", "_server2"),
+	menu_id = "RNGModifier_fish_Options_Menu"
+})
+
+MenuCallbackHandler.RNGModifier_fish_server3 = function(self, item)
+	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_server3")
+	RNGModifier:Save()
+end
+MenuHelper:AddMultipleChoice({
+	priority = -3,
+	id = "RNGModifier_fish_server3",
+	title = "RNGModifier_fish_server3_title",
+	desc = "RNGModifier_empty_desc",
+	callback = "RNGModifier_fish_server3",
+	items = {
+		"RNGModifier_Default_One_Item",
+		"RNGModifier_fish_server_1",
+		"RNGModifier_fish_server_2",
+		"RNGModifier_fish_server_3",
+		"RNGModifier_fish_server_4"
+	},  
+	value = RNGModifier:SafeGetData("fish", "_server3"),
+	menu_id = "RNGModifier_fish_Options_Menu"
+})
+
 --[[MenuCallbackHandler.RNGModifier_fish_test = function(self, item)
 	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_test")
 	RNGModifier:Save()

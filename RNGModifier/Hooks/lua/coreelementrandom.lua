@@ -4239,6 +4239,27 @@ function ElementRandom:_get_random_elements()
 				elseif self._values.instance_name == "server_rack_004" then
 					rand = GetIndexFromChoice(GetMultipleChoiceValue(_level_id, "_button4"))
 				end
+			elseif self._id == 100980 then
+				_tmp_data[_level_id] = _tmp_data[_level_id] or {}
+				
+				if not _tmp_data[_level_id].server_rack then
+					_tmp_data[_level_id].server_rack = {}
+					
+					local _server1 = GetMultipleChoiceValue(_level_id, "_server1")
+					local _server2 = GetMultipleChoiceValue(_level_id, "_server2")
+					local _server3 = GetMultipleChoiceValue(_level_id, "_server3")
+					
+					if _server1 > 0 then table.insert(_tmp_data[_level_id].server_rack, _server1) end
+					if _server2 > 0 then table.insert(_tmp_data[_level_id].server_rack, _server2) end
+					if _server3 > 0 then table.insert(_tmp_data[_level_id].server_rack, _server3) end
+				end
+				
+				if _tmp_data[_level_id].server_rack and #_tmp_data[_level_id].server_rack > 0 then
+					local choice = _tmp_data[_level_id].server_rack[1]
+					table.remove(_tmp_data[_level_id].server_rack,1)
+					
+					rand = GetIndexFromChoice(choice)
+				end
 			elseif self._id == 140280 then
 				
 				local disable_money_A = (RNGModifier:SafeGetData(_level_id, "_disable_money_A") or 0) - 1
