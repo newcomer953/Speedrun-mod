@@ -4148,9 +4148,9 @@ function ElementRandom:_get_random_elements()
 			
 		elseif _level_id == "fish" then		
 			if self._id == 100332 then
-				rand = GetIndexFromChoice(PickRandomFromList(_level_id,"_color"))	
-					_tmp_data[_level_id] = _tmp_data[_level_id] or {}
-					_tmp_data[_level_id].color = rand
+				rand = PickRandomFromList(rand,"_color")	
+				_tmp_data[_level_id] = _tmp_data[_level_id] or {}
+				_tmp_data[_level_id].color = rand			
 			elseif self._id == 100261 then				
 				local _laptop1 = (RNGModifier:SafeGetData(_level_id, "_laptop1") or 0) - 1
 				local offset = {1,2,3,4,5,6,7,9}
