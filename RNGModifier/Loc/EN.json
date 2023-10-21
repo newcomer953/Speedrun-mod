@@ -891,21 +891,25 @@
 	"RNGModifier_election_day_3_skip2_test1_title": "test",
 	
 	"RNGModifier_friend_rightcoke_desc" : " Need to turn coke mic on to work  ",
+	
 	"RNGModifier_friend_pick_rand_escape_vehicle_title" : "Escape Plan",
 	"RNGModifier_friend_pick_rand_escape_vehicle_001" : "1",
 	"RNGModifier_friend_pick_rand_escape_vehicle_002" : "2",
 	"RNGModifier_friend_pick_rand_escape_vehicle_003" : "3",
+	
 	"RNGModifier_friend_random_phone_location_title" : " Phone ",
 	"RNGModifier_friend_random_phone_location_001" : " 1 ",
 	"RNGModifier_friend_random_phone_location_002" : " 2 ",
 	"RNGModifier_friend_random_phone_location_003" : " 3 ",
 	"RNGModifier_friend_random_phone_location_004" : " 4 ",
 	"RNGModifier_friend_random_phone_location_005" : " 5 ",
+	
 	"RNGModifier_friend_laptop_location_title" : " Laptop ",
-	"RNGModifier_friend_laptop_location_001" : " 1 ",
-	"RNGModifier_friend_laptop_location_002" : " 2 ",
+	"RNGModifier_friend_laptop_location_001" : "BOAT SHED",
+	"RNGModifier_friend_laptop_location_002" : "FRONT SHED",
+	
 	"RNGModifier_friend_coke_mic_title" : " Coke  mic ",
-	"RNGModifier_friend_coke_mic_001" : " ON ",
+	
 	"RNGModifier_friend_coke_title" : " Coke ",
 	"RNGModifier_friend_coke_001" : " 1 ",
 	"RNGModifier_friend_coke_002" : " 2 ",
@@ -927,19 +931,43 @@
 	"RNGModifier_friend_coke_0018" : " 18 ",
 	"RNGModifier_friend_coke_0019" : " 19 ",
 	"RNGModifier_friend_coke_0020" : " 20 ",
+	
 	"RNGModifier_friend_usb_boss_title" : " Usb Boss ",
-	"RNGModifier_friend_usb_boss_001" : " 1 ",
-	"RNGModifier_friend_usb_boss_002" : " 2 ",
-	"RNGModifier_friend_usb_boss_003" : " 3 ",
+	"RNGModifier_friend_usb_boss_001" : "BOAT",
+	"RNGModifier_friend_usb_boss_002" : "FRONT SHED/SIDE",
+	"RNGModifier_friend_usb_boss_003" : "YARD",
+	
 	"RNGModifier_friend_door_title": "Door",
-	"RNGModifier_friend_door_001": "1",
-	"RNGModifier_friend_door_002": "2",
+	"RNGModifier_friend_door_001": "BOAT",
+	"RNGModifier_friend_door_002": "FRONT",
+	"RNGModifier_friend_door_003": "SIDE",
+	
 	"RNGModifier_friend_button_title": "Door button",
-	"RNGModifier_friend_pick_rand_escape_vehicle_desc": "1)Boat 2)Stealth: Van at the corner, Loud: Van on the spawn 3)Stealth: Softlock, Loud: Van at the corner",
-	"RNGModifier_friend_door_desc": "If Button Front: 1)Boat 2)Side; Button Boat: 1)Front 2)Side; Button Side: 1)Front 2)Boat",
 	"RNGModifier_friend_button_001": "Front",
 	"RNGModifier_friend_button_002": "Boat",
 	"RNGModifier_friend_button_003": "Side",
+	
+	"RNGModifier_friend_pick_rand_escape_vehicle_desc": "1)Boat 2)Stealth: Van at the corner, Loud: Van on the spawn 3)Stealth: Softlock, Loud: Van at the corner",
+	
+	"RNGModifier_friend_door_desc": "If Button Front: 1)Boat 2)Side; Button Boat: 1)Front 2)Side; Button Side: 1)Front 2)Boat",
+
+	"RNGModifier_friend_hackboxes_1_title": "Hackbox #1",
+	"RNGModifier_friend_hackboxes_2_title": "Hackbox #2",
+	"RNGModifier_friend_hackboxes_3_title": "Hackbox #3",
+	"RNGModifier_friend_hackboxes_001": "FRONT SHED",
+	"RNGModifier_friend_hackboxes_002": "FRONT SHED USB BOSS",
+	"RNGModifier_friend_hackboxes_003": "FAR YARD #1",
+	"RNGModifier_friend_hackboxes_004": "BOAT DOOR #1",
+	"RNGModifier_friend_hackboxes_005": "FRONT DOOR",
+	"RNGModifier_friend_hackboxes_006": "FRONT NEAR CARS",
+	"RNGModifier_friend_hackboxes_007": "MIDDLE YARD",
+	"RNGModifier_friend_hackboxes_008": "BOAT SHED",
+	"RNGModifier_friend_hackboxes_009": "AT SPAWN #1",
+	"RNGModifier_friend_hackboxes_010": "AT SPAWN LEFT",
+	"RNGModifier_friend_hackboxes_011": "SIDE OF BOAT SHED",
+	"RNGModifier_friend_hackboxes_014": "AT SPAWN RIGHT",
+	"RNGModifier_friend_hackboxes_016": "BOAT DOOR #2",
+	"RNGModifier_friend_hackboxes_018": "AT SPAWN #2",
 	
 	"RNGModifier_des_test_title": "test",
 	

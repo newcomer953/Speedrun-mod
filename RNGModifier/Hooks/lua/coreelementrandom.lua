@@ -597,12 +597,28 @@ function ElementRandom:_get_random_elements()
 				rand = PickRandomFromList(rand, "_random_phone_location")
 			elseif self._id == 100331 then
 				rand = PickRandomFromList(rand, "_laptop_location")
-			elseif self._id == 100326 then
+			elseif self._id == 102092 or self._id == 101987 then
+			
+				local hackboxes_1 = (RNGModifier:SafeGetData(_level_id, "_hackboxes_1") or 0) - 1
+				local hackboxes_2 = (RNGModifier:SafeGetData(_level_id, "_hackboxes_2") or 0) - 1
+				local hackboxes_3 = (RNGModifier:SafeGetData(_level_id, "_hackboxes_3") or 0) - 1
+				local offset = {1,2,3,4,5,6,7,1,2,3,4,5,6,7,8,9,10,11,12}
+				
+				for i, choice in ipairs(self._unused_randoms) do
+					if choice == hackboxes_1 or choice == hackboxes_2 or choice == hackboxes_3 then
+						local 
+						rand = GetIndexFromChoice(offset[i])
+						break
+					end
+				end
+				
+			elseif self._id == 100326 or self._id == 100117 then
 				rand = PickRandomFromList(rand, "_usb_boss")
 			elseif self._id == 102517 then
 				rand = PickRandomFromList(rand, "_coke")
 			elseif self._id == 102725 then
-				rand = PickRandomFromList(rand, "_coke_mic")
+				local _coke_mic = GetCheckboxValue(_level_id, "_coke_mic")
+				if _coke_mic then rand = 1 end
 			elseif self._id == 102049 then
 				rand = PickRandomFromList(rand, "_button")
 			elseif self._id == 102087 then
