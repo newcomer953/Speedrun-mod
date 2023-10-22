@@ -597,20 +597,55 @@ function ElementRandom:_get_random_elements()
 				rand = PickRandomFromList(rand, "_random_phone_location")
 			elseif self._id == 100331 then
 				rand = PickRandomFromList(rand, "_laptop_location")
-			elseif self._id == 102092 or self._id == 101987 then
+			elseif self._id == 101987 then
 			
-				local hackboxes_1 = (RNGModifier:SafeGetData(_level_id, "_hackboxes_1") or 0) - 1
-				local hackboxes_2 = (RNGModifier:SafeGetData(_level_id, "_hackboxes_2") or 0) - 1
-				local hackboxes_3 = (RNGModifier:SafeGetData(_level_id, "_hackboxes_3") or 0) - 1
-				local offset = {1,2,3,4,5,6,7,1,2,3,4,5,6,7,8,9,10,11,12}
+				local hackboxes_1 = GetMultipleChoiceValue(_level_id, "_hackboxes_1")
+				local hackboxes_2 = GetMultipleChoiceValue(_level_id, "_hackboxes_2")
+				local hackboxes_3 = GetMultipleChoiceValue(_level_id, "_hackboxes_3")
 				
 				for i, choice in ipairs(self._unused_randoms) do
 					if choice == hackboxes_1 or choice == hackboxes_2 or choice == hackboxes_3 then
-						local 
-						rand = GetIndexFromChoice(offset[i])
+						
+						rand = i
 						break
 					end
 				end
+				
+			elseif self._id == 102092 then
+			
+				local hackboxes_1 = GetMultipleChoiceValue(_level_id, "_hackboxes_1")
+				local hackboxes_2 = GetMultipleChoiceValue(_level_id, "_hackboxes_2")
+				local hackboxes_3 = GetMultipleChoiceValue(_level_id, "_hackboxes_3")
+				
+				for i, choice in ipairs(self._unused_randoms) do
+					if choice == hackboxes_1 or choice == hackboxes_2 or choice == hackboxes_3 then
+						
+						rand = i
+						break
+					end
+				end
+				
+				--[[tmp_data[_level_id] = _tmp_data[_level_id] or {}
+				
+				if not _tmp_data[_level_id].hackboxes then
+					_tmp_data[_level_id].hackboxes = {}
+					
+					local hackboxes_1 = GetMultipleChoiceValue(_level_id, "_hackboxes_1")
+					local hackboxes_2 = GetMultipleChoiceValue(_level_id, "_hackboxes_2")
+					local hackboxes_3 = GetMultipleChoiceValue(_level_id, "_hackboxes_3")
+					
+					if hackboxes_1 > 0 then table.insert(_tmp_data[_level_id].hackboxes, _hackboxes_1) end
+					if hackboxes_2 > 0 then table.insert(_tmp_data[_level_id].hackboxes, _hackboxes_2) end
+					if hackboxes_3 > 0 then table.insert(_tmp_data[_level_id].hackboxes, _hackboxes_3) end
+				end
+				
+				if _tmp_data[_level_id].hackboxes and #_tmp_data[_level_id].hackboxes > 0 then
+					local choice = _tmp_data[_level_id].hackboxes[1]
+					table.remove(_tmp_data[_level_id].hackboxes,1)
+					local offset = {1,2,3,4,5,6,7,1,2,3,4,5,6,7,8,9,10,11,12}
+					
+					rand = GetIndexFromChoice(offset[choice])
+				end]]
 				
 			elseif self._id == 100326 or self._id == 100117 then
 				rand = PickRandomFromList(rand, "_usb_boss")
@@ -4164,7 +4199,7 @@ function ElementRandom:_get_random_elements()
 			
 		elseif _level_id == "fish" then		
 			if self._id == 100332 then
-				rand = PickRandomFromList(rand,"_color")	
+				rand = GetIndexFromChoice(PickRandomFromList(rand,"_color"))
 				_tmp_data[_level_id] = _tmp_data[_level_id] or {}
 				_tmp_data[_level_id].color = rand			
 			elseif self._id == 100261 then				

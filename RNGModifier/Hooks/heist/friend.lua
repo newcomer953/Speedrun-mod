@@ -76,14 +76,7 @@ MenuHelper:AddMultipleChoice({
 		"RNGModifier_friend_hackboxes_009",
 		"RNGModifier_friend_hackboxes_010",
 		"RNGModifier_friend_hackboxes_011",
-		"RNGModifier_friend_hackboxes_003",
-		"RNGModifier_friend_hackboxes_004",
-		"RNGModifier_friend_hackboxes_014",
-		"RNGModifier_friend_hackboxes_005",
-		"RNGModifier_friend_hackboxes_016",
-		"RNGModifier_friend_hackboxes_006",
-		"RNGModifier_friend_hackboxes_018",
-		"RNGModifier_friend_hackboxes_007"
+		"RNGModifier_friend_hackboxes_012"
 	},
 	value = RNGModifier:SafeGetData(_Current_Heist, "_hackboxes_1"),
 	menu_id = "RNGModifier_friend_Options_Menu"
@@ -112,14 +105,8 @@ MenuHelper:AddMultipleChoice({
 		"RNGModifier_friend_hackboxes_009",
 		"RNGModifier_friend_hackboxes_010",
 		"RNGModifier_friend_hackboxes_011",
-		"RNGModifier_friend_hackboxes_003",
-		"RNGModifier_friend_hackboxes_004",
-		"RNGModifier_friend_hackboxes_014",
-		"RNGModifier_friend_hackboxes_005",
-		"RNGModifier_friend_hackboxes_016",
-		"RNGModifier_friend_hackboxes_006",
-		"RNGModifier_friend_hackboxes_018",
-		"RNGModifier_friend_hackboxes_007"
+		"RNGModifier_friend_hackboxes_012"
+		
 	},
 	value = RNGModifier:SafeGetData(_Current_Heist, "_hackboxes_2"),
 	menu_id = "RNGModifier_friend_Options_Menu"
@@ -148,14 +135,7 @@ MenuHelper:AddMultipleChoice({
 		"RNGModifier_friend_hackboxes_009",
 		"RNGModifier_friend_hackboxes_010",
 		"RNGModifier_friend_hackboxes_011",
-		"RNGModifier_friend_hackboxes_003",
-		"RNGModifier_friend_hackboxes_004",
-		"RNGModifier_friend_hackboxes_014",
-		"RNGModifier_friend_hackboxes_005",
-		"RNGModifier_friend_hackboxes_016",
-		"RNGModifier_friend_hackboxes_006",
-		"RNGModifier_friend_hackboxes_018",
-		"RNGModifier_friend_hackboxes_007"
+		"RNGModifier_friend_hackboxes_012"
 	},
 	value = RNGModifier:SafeGetData(_Current_Heist, "_hackboxes_3"),
 	menu_id = "RNGModifier_friend_Options_Menu"
