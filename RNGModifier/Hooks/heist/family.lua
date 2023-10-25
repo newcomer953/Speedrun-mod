@@ -27,20 +27,20 @@ MenuHelper:AddMultipleChoice({
 })
 
 MenuCallbackHandler.RNGModifier_family_best_diamonds = function(self, item)
-	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_best_diamonds")
+	if tostring(item:value()) == "on" then
+		RNGModifier:SafeSetData(1, _Current_Heist, "_best_diamonds")
+	else
+		RNGModifier:SafeSetData(0, _Current_Heist, "_best_diamonds")
+	end
 	RNGModifier:Save()
 end
-MenuHelper:AddMultipleChoice({
+MenuHelper:AddToggle({
 	id = "RNGModifier_family_best_diamonds",
 	title = "RNGModifier_family_best_diamonds_title",
 	desc = "RNGModifier_empty_desc",
 	callback = "RNGModifier_family_best_diamonds",
-	items = {
-		"RNGModifier_Default_One_Item",
-		"RNGModifier_family_best_diamonds_1"
-	},
-	value = RNGModifier:SafeGetData("family", "_best_diamonds"),
-	menu_id = "RNGModifier_family_Options_Menu"
+	value = tonumber(RNGModifier:SafeGetData(_Current_Heist, "_best_diamonds")) == 1,
+	menu_id = "RNGModifier_" .. _Current_Heist .. "_Options_Menu"
 })
 
 

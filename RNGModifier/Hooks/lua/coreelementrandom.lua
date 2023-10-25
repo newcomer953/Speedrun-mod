@@ -2123,8 +2123,9 @@ function ElementRandom:_get_random_elements()
 			
 				if not _tmp_data[_level_id].diamond then
 					_tmp_data[_level_id].diamond = {}
-					local best_diamonds = (RNGModifier:SafeGetData(_level_id, "_best_diamonds") or 0) - 1
-					if best_diamonds > 0 then
+					--local best_diamonds = (RNGModifier:SafeGetData(_level_id, "_best_diamonds") or 0) - 1
+					local best_diamonds = GetCheckboxValue(_level_id, "_best_diamonds")
+					if best_diamonds then
 						_tmp_data[_level_id].diamond = {1,2,3,5,7,8,9,18,19,21,23,24,25,26,27,39,40,45}
 					end
 				end

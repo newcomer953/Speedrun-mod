@@ -618,7 +618,7 @@
 	
 	"RNGModifier_big_six_cash_closest_cage_title": "6 CAGE CASH",
 	"RNGModifier_big_six_cash_closest_cage_desc": "Based on vault door selection",
-	"RNGModifier_big_four_gold_closest_cage_title": "4 CAGE GOLD ",
+	"RNGModifier_big_four_gold_closest_cage_title": "4 CAGE GOLD",
 	"RNGModifier_big_six_cash_closest_cage_1": "Bus Crash, Up AREA",
 	"RNGModifier_big_six_cash_closest_cage_2": "Bus Crash, Down AREA",
 	"RNGModifier_big_six_cash_closest_cage_3": "Zip-line, Down AREA",
@@ -2525,8 +2525,7 @@
 	"RNGModifier_family_rand_keypad_2" : "First after go into 2F",
 	"RNGModifier_family_rand_keypad_3" : "Second",
 	"RNGModifier_family_rand_keypad_4" : "Security Room",
-	"RNGModifier_family_best_diamonds_title": "Diamonds",
-	"RNGModifier_family_best_diamonds_1":"Best option",
+	"RNGModifier_family_best_diamonds_title": "BEST DIAMONDS",
 	"RNGModifier_family_chance_of_door_title" : "Security Outside Door",
 
 	"RNGModifier_flat_entrance_title": "Entrance",
