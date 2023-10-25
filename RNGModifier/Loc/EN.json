@@ -2283,17 +2283,17 @@
 	"RNGModifier_dinner_escape003_2": "RIGHT - LEFT - RIGHT",
 	"RNGModifier_dinner_escape003_3": "LEFT - CONTINUE - RIGHT - LEFT - RIGHT - CONTINUE",
 	
-	"RNGModifier_dinner_escape003_path1_title": "IF RIGHT -> RIGHT",
+	"RNGModifier_dinner_escape003_path1_title": "IF RIGHT -> LEFT #1",
 	"RNGModifier_dinner_escape003_path1_1": "CLOSE 1ST AND 4TH",
 	"RNGModifier_dinner_escape003_path1_2": "CLOSE 1ST AND 5TH",
 	"RNGModifier_dinner_escape003_path1_3": "CLOSE 4TH AND 5TH",
 								
-	"RNGModifier_dinner_escape003_path2_title": "IF RIGHT -> MID",
+	"RNGModifier_dinner_escape003_path2_title": "IF RIGHT -> RIGHT",
 	"RNGModifier_dinner_escape003_path2_1": "CLOSE 1ST AND LAST",
 	"RNGModifier_dinner_escape003_path2_2": "CLOSE 2ND AND LAST",
 								
-	"RNGModifier_dinner_escape003_path3_title": "IF RIGHT -> LEFT",
-	"RNGModifier_dinner_escape003_path3_1": "CLOSE 1ST AND 5TH"
+	"RNGModifier_dinner_escape003_path3_title": "IF RIGHT -> LEFT #2",
+	"RNGModifier_dinner_escape003_path3_1": "CLOSE 1ST AND 5TH",
 	"RNGModifier_dinner_escape003_path3_2": "CLOSE 1ST AND LAST",
 	
 	"RNGModifier_nmh_best_cameras_title": "BEST CAMERA",

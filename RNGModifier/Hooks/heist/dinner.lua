@@ -159,7 +159,7 @@ MenuHelper:AddMultipleChoice({
 	menu_id = "RNGModifier_dinner_Options_Menu"
 })
 
-MenuCallbackHandler.RNGModifier_dinner_escape001 = function(self, item)
+--[[MenuCallbackHandler.RNGModifier_dinner_escape001 = function(self, item)
 	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_escape001")
 	RNGModifier:Save()
 end
@@ -235,85 +235,7 @@ MenuHelper:AddMultipleChoice({
 	},
 	value = RNGModifier:SafeGetData(_Current_Heist, "_escape001_path3"),
 	menu_id = "RNGModifier_dinner_Options_Menu"
-})
-
-MenuCallbackHandler.RNGModifier_dinner_escape002 = function(self, item)
-	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_escape002")
-	RNGModifier:Save()
-end
-MenuHelper:AddMultipleChoice({
-	priority = GetPriority(),
-	id = "RNGModifier_dinner_escape002",
-	title = "RNGModifier_dinner_escape002_title",
-	desc = "RNGModifier_empty_desc",
-	callback = "RNGModifier_dinner_escape002",
-	items = {
-		"RNGModifier_Default_One_Item",
-		"RNGModifier_dinner_escape002_1",
-		"RNGModifier_dinner_escape002_2",
-		"RNGModifier_dinner_escape002_3"
-	},
-	value = RNGModifier:SafeGetData(_Current_Heist, "_escape002"),
-	menu_id = "RNGModifier_dinner_Options_Menu"
-})
-
-MenuCallbackHandler.RNGModifier_dinner_escape002_path1 = function(self, item)
-	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_escape002_path1")
-	RNGModifier:Save()
-end
-MenuHelper:AddMultipleChoice({
-	priority = GetPriority(),
-	id = "RNGModifier_dinner_escape002_path1",
-	title = "RNGModifier_dinner_escape002_path1_title",
-	desc = "RNGModifier_empty_desc",
-	callback = "RNGModifier_dinner_escape002_path1",
-	items = {
-		"RNGModifier_Default_One_Item",
-		"RNGModifier_dinner_escape002_path1_1",
-		"RNGModifier_dinner_escape002_path1_2"
-	},
-	value = RNGModifier:SafeGetData(_Current_Heist, "_escape002_path1"),
-	menu_id = "RNGModifier_dinner_Options_Menu"
-})
-
-MenuCallbackHandler.RNGModifier_dinner_escape002_path2 = function(self, item)
-	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_escape002_path2")
-	RNGModifier:Save()
-end
-MenuHelper:AddMultipleChoice({
-	priority = GetPriority(),
-	id = "RNGModifier_dinner_escape002_path2",
-	title = "RNGModifier_dinner_escape002_path2_title",
-	desc = "RNGModifier_empty_desc",
-	callback = "RNGModifier_dinner_escape002_path2",
-	items = {
-		"RNGModifier_Default_One_Item",
-		"RNGModifier_dinner_escape002_path2_1",
-		"RNGModifier_dinner_escape002_path2_2"
-	},
-	value = RNGModifier:SafeGetData(_Current_Heist, "_escape002_path2"),
-	menu_id = "RNGModifier_dinner_Options_Menu"
-})
-
-MenuCallbackHandler.RNGModifier_dinner_escape002_path3 = function(self, item)
-	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_escape002_path3")
-	RNGModifier:Save()
-end
-MenuHelper:AddMultipleChoice({
-	priority = GetPriority(),
-	id = "RNGModifier_dinner_escape002_path3",
-	title = "RNGModifier_dinner_escape002_path3_title",
-	desc = "RNGModifier_empty_desc",
-	callback = "RNGModifier_dinner_escape002_path3",
-	items = {
-		"RNGModifier_Default_One_Item",
-		"RNGModifier_dinner_escape002_path3_1",
-		"RNGModifier_dinner_escape002_path3_2",
-		"RNGModifier_dinner_escape002_path3_3"
-	},
-	value = RNGModifier:SafeGetData(_Current_Heist, "_escape002_path3"),
-	menu_id = "RNGModifier_dinner_Options_Menu"
-})
+})]]
 
 MenuCallbackHandler.RNGModifier_dinner_escape003 = function(self, item)
 	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_escape003")
@@ -392,3 +314,82 @@ MenuHelper:AddMultipleChoice({
 	value = RNGModifier:SafeGetData(_Current_Heist, "_escape003_path3"),
 	menu_id = "RNGModifier_dinner_Options_Menu"
 })
+
+--[[MenuCallbackHandler.RNGModifier_dinner_escape002 = function(self, item)
+	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_escape002")
+	RNGModifier:Save()
+end
+MenuHelper:AddMultipleChoice({
+	priority = GetPriority(),
+	id = "RNGModifier_dinner_escape002",
+	title = "RNGModifier_dinner_escape002_title",
+	desc = "RNGModifier_empty_desc",
+	callback = "RNGModifier_dinner_escape002",
+	items = {
+		"RNGModifier_Default_One_Item",
+		"RNGModifier_dinner_escape002_1",
+		"RNGModifier_dinner_escape002_2",
+		"RNGModifier_dinner_escape002_3"
+	},
+	value = RNGModifier:SafeGetData(_Current_Heist, "_escape002"),
+	menu_id = "RNGModifier_dinner_Options_Menu"
+})
+
+MenuCallbackHandler.RNGModifier_dinner_escape002_path1 = function(self, item)
+	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_escape002_path1")
+	RNGModifier:Save()
+end
+MenuHelper:AddMultipleChoice({
+	priority = GetPriority(),
+	id = "RNGModifier_dinner_escape002_path1",
+	title = "RNGModifier_dinner_escape002_path1_title",
+	desc = "RNGModifier_empty_desc",
+	callback = "RNGModifier_dinner_escape002_path1",
+	items = {
+		"RNGModifier_Default_One_Item",
+		"RNGModifier_dinner_escape002_path1_1",
+		"RNGModifier_dinner_escape002_path1_2"
+	},
+	value = RNGModifier:SafeGetData(_Current_Heist, "_escape002_path1"),
+	menu_id = "RNGModifier_dinner_Options_Menu"
+})
+
+MenuCallbackHandler.RNGModifier_dinner_escape002_path2 = function(self, item)
+	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_escape002_path2")
+	RNGModifier:Save()
+end
+MenuHelper:AddMultipleChoice({
+	priority = GetPriority(),
+	id = "RNGModifier_dinner_escape002_path2",
+	title = "RNGModifier_dinner_escape002_path2_title",
+	desc = "RNGModifier_empty_desc",
+	callback = "RNGModifier_dinner_escape002_path2",
+	items = {
+		"RNGModifier_Default_One_Item",
+		"RNGModifier_dinner_escape002_path2_1",
+		"RNGModifier_dinner_escape002_path2_2"
+	},
+	value = RNGModifier:SafeGetData(_Current_Heist, "_escape002_path2"),
+	menu_id = "RNGModifier_dinner_Options_Menu"
+})
+
+MenuCallbackHandler.RNGModifier_dinner_escape002_path3 = function(self, item)
+	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_escape002_path3")
+	RNGModifier:Save()
+end
+MenuHelper:AddMultipleChoice({
+	priority = GetPriority(),
+	id = "RNGModifier_dinner_escape002_path3",
+	title = "RNGModifier_dinner_escape002_path3_title",
+	desc = "RNGModifier_empty_desc",
+	callback = "RNGModifier_dinner_escape002_path3",
+	items = {
+		"RNGModifier_Default_One_Item",
+		"RNGModifier_dinner_escape002_path3_1",
+		"RNGModifier_dinner_escape002_path3_2",
+		"RNGModifier_dinner_escape002_path3_3"
+	},
+	value = RNGModifier:SafeGetData(_Current_Heist, "_escape002_path3"),
+	menu_id = "RNGModifier_dinner_Options_Menu"
+})]]
+
