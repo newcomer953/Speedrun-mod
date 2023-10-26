@@ -3878,12 +3878,12 @@ function ElementRandom:_get_random_elements()
 			elseif self._id == 104485 then
 				--rand = PickRandomFromList(rand, "_escape001")
 				if _tmp_data[_level_id].escape == 1 then
-					rand = GetIndexFromChoice(1)			
+					rand = 1			
 				end
 			elseif self._id == 104653 then
 				--rand = PickRandomFromList(rand, "_escape001_path1")
 				if _tmp_data[_level_id].escape == 1 then
-					rand = GetIndexFromChoice(2)			
+					rand = 2			
 				end
 			--[[elseif self._id == 104654 then
 				rand = PickRandomFromList(rand, "_escape001_path2")
@@ -3892,7 +3892,7 @@ function ElementRandom:_get_random_elements()
 			elseif self._id == 104656 then
 				--rand = PickRandomFromList(rand, "_escape002")
 				if _tmp_data[_level_id].escape == 3 then
-					rand = GetIndexFromChoice(3)			
+					rand = 3			
 				end
 			--[[elseif self._id == 104661 then
 				rand = PickRandomFromList(rand, "_escape002_path1")
@@ -3901,16 +3901,23 @@ function ElementRandom:_get_random_elements()
 			elseif self._id == 104679 then
 				--rand = PickRandomFromList(rand, "_escape002_path3")
 				if _tmp_data[_level_id].escape == 3 then
-					rand = GetIndexFromChoice(1)			
+					rand = 1		
 				end
 			elseif self._id == 104199 then
-				rand = PickRandomFromList(rand, "_escape003")				
-			elseif self._id == 104228 then
-				rand = PickRandomFromList(rand, "_escape003_path1")
+				--rand = PickRandomFromList(rand, "_escape003")	
+				if _tmp_data[_level_id].escape == 2 then
+					rand = 2			
+				end
+			
 			elseif self._id == 104227 then
-				rand = PickRandomFromList(rand, "_escape003_path2")
+				--rand = PickRandomFromList(rand, "_escape003_path2")
+				if _tmp_data[_level_id].escape == 2 then
+					rand = 1			
+				end
+			--[[elseif self._id == 104228 then
+				rand = PickRandomFromList(rand, "_escape003_path1")
 			elseif self._id == 104229 then
-				rand = PickRandomFromList(rand, "_escape003_path3")
+				rand = PickRandomFromList(rand, "_escape003_path3")]]
 			end
 		
 		elseif _level_id == "nmh" then

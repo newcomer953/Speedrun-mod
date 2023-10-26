@@ -235,7 +235,7 @@ MenuHelper:AddMultipleChoice({
 	},
 	value = RNGModifier:SafeGetData(_Current_Heist, "_escape001_path3"),
 	menu_id = "RNGModifier_dinner_Options_Menu"
-})]]
+})
 
 MenuCallbackHandler.RNGModifier_dinner_escape003 = function(self, item)
 	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_escape003")
@@ -315,7 +315,7 @@ MenuHelper:AddMultipleChoice({
 	menu_id = "RNGModifier_dinner_Options_Menu"
 })
 
---[[MenuCallbackHandler.RNGModifier_dinner_escape002 = function(self, item)
+MenuCallbackHandler.RNGModifier_dinner_escape002 = function(self, item)
 	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_escape002")
 	RNGModifier:Save()
 end

@@ -133,7 +133,7 @@ function ElementLogicChance:on_executed(...)
 					self._chance = 999
 				end
 			elseif self._id == 103011 then
-				local _escape = (RNGModifier:SafeGetData(_level_id, "_escape") or 0) - 1
+				local _escape = GetMultipleChoiceValue(_level_id, "_escape")
 				if _escape == 1 then 
 					self._chance = 999
 				elseif _escape == 2 then
