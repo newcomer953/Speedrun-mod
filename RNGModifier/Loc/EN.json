@@ -2260,41 +2260,41 @@
 	"RNGModifier_dinner_escape001_path3_2": "CLOSE 2ND AND LAST",
 	"RNGModifier_dinner_escape001_path3_3": "CLOSE 3RD AND LAST",
 	
-	"RNGModifier_dinner_escape002_title": "CONTINUE FROM LEFT",
-	"RNGModifier_dinner_escape002_1": "RIGHT - CONTINUE - CONTINUE - LEFT - RIGHT",
-	"RNGModifier_dinner_escape002_2": "MID - LEFT - RIGHT - RIGHT - LEFT",
-	"RNGModifier_dinner_escape002_3": "LEFT - CONTINUE - CONTINUE - CONTINUE",
+	"RNGModifier_dinner_escape002_title": "CONTINUE FROM RIGHT",
+	"RNGModifier_dinner_escape002_1": "LEFT - RIGHT - RIGHT - RIGHT - RIGHT - LEFT",
+	"RNGModifier_dinner_escape002_2": "RIGHT - LEFT - RIGHT",
+	"RNGModifier_dinner_escape002_3": "LEFT - CONTINUE - RIGHT - LEFT - RIGHT - CONTINUE",
 	
-	"RNGModifier_dinner_escape002_path1_title": "IF LEFT -> RIGHT",
-	"RNGModifier_dinner_escape002_path1_1": "CLOSE 3RD AND LAST",
-	"RNGModifier_dinner_escape002_path1_2": "CLOSE 4TH AND LAST",
+	"RNGModifier_dinner_escape002_path1_title": "IF RIGHT -> LEFT #1",
+	"RNGModifier_dinner_escape002_path1_1": "CLOSE 1ST AND 4TH",
+	"RNGModifier_dinner_escape002_path1_2": "CLOSE 1ST AND 5TH",
+	"RNGModifier_dinner_escape002_path1_3": "CLOSE 4TH AND 5TH",
 								
-	"RNGModifier_dinner_escape002_path2_title": "IF LEFT -> MID",
-	"RNGModifier_dinner_escape002_path2_1": "CLOSE 3RD AND 4TH",
-	"RNGModifier_dinner_escape002_path2_2": "CLOSE 3RD AND LAST",
+	"RNGModifier_dinner_escape002_path2_title": "IF RIGHT -> RIGHT",
+	"RNGModifier_dinner_escape002_path2_1": "CLOSE 1ST AND LAST",
+	"RNGModifier_dinner_escape002_path2_2": "CLOSE 2ND AND LAST",
 								
-	"RNGModifier_dinner_escape002_path3_title": "IF LEFT -> LEFT",
-	"RNGModifier_dinner_escape002_path3_1": "CLOSE 1ST AND 3RD"
+	"RNGModifier_dinner_escape002_path3_title": "IF RIGHT -> LEFT #2",
+	"RNGModifier_dinner_escape002_path3_1": "CLOSE 1ST AND 5TH",
 	"RNGModifier_dinner_escape002_path3_2": "CLOSE 1ST AND LAST",
-	"RNGModifier_dinner_escape002_path3_3": "CLOSE 2ND AND LAST",
 	
-	"RNGModifier_dinner_escape003_title": "CONTINUE FROM RIGHT",
-	"RNGModifier_dinner_escape003_1": "LEFT - RIGHT - RIGHT - RIGHT - RIGHT - LEFT",
-	"RNGModifier_dinner_escape003_2": "RIGHT - LEFT - RIGHT",
-	"RNGModifier_dinner_escape003_3": "LEFT - CONTINUE - RIGHT - LEFT - RIGHT - CONTINUE",
+	"RNGModifier_dinner_escape003_title": "CONTINUE FROM LEFT",
+	"RNGModifier_dinner_escape003_1": "RIGHT - CONTINUE - CONTINUE - LEFT - RIGHT",
+	"RNGModifier_dinner_escape003_2": "MID - LEFT - RIGHT - RIGHT - LEFT",
+	"RNGModifier_dinner_escape003_3": "LEFT - CONTINUE - CONTINUE - CONTINUE",
 	
-	"RNGModifier_dinner_escape003_path1_title": "IF RIGHT -> LEFT #1",
-	"RNGModifier_dinner_escape003_path1_1": "CLOSE 1ST AND 4TH",
-	"RNGModifier_dinner_escape003_path1_2": "CLOSE 1ST AND 5TH",
-	"RNGModifier_dinner_escape003_path1_3": "CLOSE 4TH AND 5TH",
+	"RNGModifier_dinner_escape003_path1_title": "IF LEFT -> RIGHT",
+	"RNGModifier_dinner_escape003_path1_1": "CLOSE 3RD AND LAST",
+	"RNGModifier_dinner_escape003_path1_2": "CLOSE 4TH AND LAST",
 								
-	"RNGModifier_dinner_escape003_path2_title": "IF RIGHT -> RIGHT",
-	"RNGModifier_dinner_escape003_path2_1": "CLOSE 1ST AND LAST",
-	"RNGModifier_dinner_escape003_path2_2": "CLOSE 2ND AND LAST",
+	"RNGModifier_dinner_escape003_path2_title": "IF LEFT -> MID",
+	"RNGModifier_dinner_escape003_path2_1": "CLOSE 3RD AND 4TH",
+	"RNGModifier_dinner_escape003_path2_2": "CLOSE 3RD AND LAST",
 								
-	"RNGModifier_dinner_escape003_path3_title": "IF RIGHT -> LEFT #2",
-	"RNGModifier_dinner_escape003_path3_1": "CLOSE 1ST AND 5TH",
+	"RNGModifier_dinner_escape003_path3_title": "IF LEFT -> LEFT",
+	"RNGModifier_dinner_escape003_path3_1": "CLOSE 1ST AND 3RD"
 	"RNGModifier_dinner_escape003_path3_2": "CLOSE 1ST AND LAST",
+	"RNGModifier_dinner_escape003_path3_3": "CLOSE 2ND AND LAST",
 	
 	"RNGModifier_nmh_best_cameras_title": "BEST CAMERA",
 	
