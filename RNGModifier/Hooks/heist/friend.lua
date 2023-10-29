@@ -141,6 +141,68 @@ MenuHelper:AddMultipleChoice({
 	menu_id = "RNGModifier_friend_Options_Menu"
 })
 
+MenuCallbackHandler.RNGModifier_friend_rewire_1 = function(self, item)
+	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_rewire_1")
+	RNGModifier:Save()
+end
+MenuHelper:AddMultipleChoice({
+	priority = GetPriority(),
+	id = "RNGModifier_friend_rewire_1",
+	title = "RNGModifier_friend_rewire_1_title",
+	desc = "RNGModifier_empty_desc",
+	callback = "RNGModifier_friend_rewire_1",
+	items = {
+		"RNGModifier_Default_One_Item",
+		"RNGModifier_friend_rewire_001",
+		"RNGModifier_friend_rewire_002",
+		"RNGModifier_friend_rewire_003",
+		"RNGModifier_friend_rewire_004",
+		"RNGModifier_friend_rewire_005",
+		"RNGModifier_friend_rewire_006",
+		"RNGModifier_friend_rewire_007",
+		"RNGModifier_friend_rewire_008",
+		"RNGModifier_friend_rewire_009",
+		"RNGModifier_friend_rewire_010",
+		"RNGModifier_friend_rewire_011",
+		"RNGModifier_friend_rewire_012",
+		"RNGModifier_friend_rewire_013",
+		"RNGModifier_friend_rewire_014"
+	},
+	value = RNGModifier:SafeGetData(_Current_Heist, "_rewire_1"),
+	menu_id = "RNGModifier_friend_Options_Menu"
+})
+
+MenuCallbackHandler.RNGModifier_friend_rewire_2 = function(self, item)
+	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_rewire_2")
+	RNGModifier:Save()
+end
+MenuHelper:AddMultipleChoice({
+	priority = GetPriority(),
+	id = "RNGModifier_friend_rewire_2",
+	title = "RNGModifier_friend_rewire_2_title",
+	desc = "RNGModifier_friend_rewire_desc",
+	callback = "RNGModifier_friend_rewire_2",
+	items = {
+		"RNGModifier_Default_One_Item",
+		"RNGModifier_friend_rewire_001",
+		"RNGModifier_friend_rewire_002",
+		"RNGModifier_friend_rewire_003",
+		"RNGModifier_friend_rewire_004",
+		"RNGModifier_friend_rewire_005",
+		"RNGModifier_friend_rewire_006",
+		"RNGModifier_friend_rewire_007",
+		"RNGModifier_friend_rewire_008",
+		"RNGModifier_friend_rewire_009",
+		"RNGModifier_friend_rewire_010",
+		"RNGModifier_friend_rewire_011",
+		"RNGModifier_friend_rewire_012",
+		"RNGModifier_friend_rewire_013",
+		"RNGModifier_friend_rewire_014"
+	},
+	value = RNGModifier:SafeGetData(_Current_Heist, "_rewire_2"),
+	menu_id = "RNGModifier_friend_Options_Menu"
+})
+
 MenuCallbackHandler.RNGModifier_friend_door = function(self, item)
 	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_door")
 	RNGModifier:Save()

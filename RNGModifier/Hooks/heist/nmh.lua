@@ -124,6 +124,24 @@ MenuHelper:AddToggle({
 	menu_id = "RNGModifier_" .. _Current_Heist .. "_Options_Menu"
 })
 
+MenuCallbackHandler.RNGModifier_nmh_nopower = function(self, item)
+	if tostring(item:value()) == "on" then
+		RNGModifier:SafeSetData(1, _Current_Heist, "_nopower")
+	else
+		RNGModifier:SafeSetData(0, _Current_Heist, "_nopower")
+	end
+	RNGModifier:Save()
+end
+MenuHelper:AddToggle({
+	priority = GetPriority(),
+	id = "RNGModifier_nmh_nopower",
+	title = "RNGModifier_nmh_nopower_title",
+	desc = "RNGModifier_empty_desc",
+	callback = "RNGModifier_nmh_nopower",
+	value = tonumber(RNGModifier:SafeGetData(_Current_Heist, "_nopower")) == 1,
+	menu_id = "RNGModifier_" .. _Current_Heist .. "_Options_Menu"
+})
+
 MenuCallbackHandler.RNGModifier_nmh_escape = function(self, item)
 	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_escape")
 	RNGModifier:Save()

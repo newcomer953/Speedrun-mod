@@ -651,6 +651,27 @@ function ElementRandom:_get_random_elements()
 				rand = PickRandomFromList(rand, "_usb_boss")
 			elseif self._id == 102517 then
 				rand = PickRandomFromList(rand, "_coke")
+			elseif self._id == 102038 then
+				--rand = PickRandomFromList(rand, "_rewire_1")
+				
+				_tmp_data[_level_id] = _tmp_data[_level_id] or {}
+				
+				if not _tmp_data[_level_id].rewire then
+					_tmp_data[_level_id].rewire = {}
+					
+					local _rewire_1 = GetMultipleChoiceValue(_level_id, "_rewire_1")
+					local _rewire_2 = GetMultipleChoiceValue(_level_id, "_rewire_2")
+					
+					if _rewire_1 > 0 then table.insert(_tmp_data[_level_id].rewire, _rewire_1) end
+					if _rewire_2 > 0 then table.insert(_tmp_data[_level_id].rewire, _rewire_2) end
+				end
+				
+				if _tmp_data[_level_id].rewire and #_tmp_data[_level_id].rewire > 0 then
+					local choice = _tmp_data[_level_id].rewire[1]
+					table.remove(_tmp_data[_level_id].rewire,1)
+					
+					rand = GetIndexFromChoice(choice)
+				end
 			elseif self._id == 102725 then
 				local _coke_mic = GetCheckboxValue(_level_id, "_coke_mic")
 				if _coke_mic then rand = 1 end
@@ -3888,36 +3909,35 @@ function ElementRandom:_get_random_elements()
 			--[[elseif self._id == 104654 then
 				rand = PickRandomFromList(rand, "_escape001_path2")
 			elseif self._id == 104660 then
-				rand = PickRandomFromList(rand, "_escape001_path3")]]
-			
-			elseif self._id == 104199 then
-				--rand = PickRandomFromList(rand, "_escape002")	
-				if _tmp_data[_level_id].escape == 2 then
-					rand = 2			
-				end
-			
-			elseif self._id == 104227 then
-				--rand = PickRandomFromList(rand, "_escape002_path2")
-				if _tmp_data[_level_id].escape == 2 then
-					rand = 1			
-				end
+				rand = PickRandomFromList(rand, "_escape001_path3")]]			
 			--[[elseif self._id == 104228 then
 				rand = PickRandomFromList(rand, "_escape002_path1")
 			elseif self._id == 104229 then
 				rand = PickRandomFromList(rand, "_escape002_path3")]]
 			elseif self._id == 104656 then
-				--rand = PickRandomFromList(rand, "_escape003")
-				if _tmp_data[_level_id].escape == 3 then
-					rand = 3			
+				--rand = PickRandomFromList(rand, "_escape002")
+				if _tmp_data[_level_id].escape == 2 then
+					rand = 3		
 				end
 			--[[elseif self._id == 104661 then
 				rand = PickRandomFromList(rand, "_escape003_path1")
 			elseif self._id == 104662 then
 				rand = PickRandomFromList(rand, "_escape003_path2")]]
 			elseif self._id == 104679 then
-				--rand = PickRandomFromList(rand, "_escape003_path3")
+				--rand = PickRandomFromList(rand, "_escape002_path3")
+				if _tmp_data[_level_id].escape == 2 then
+					rand = 1	
+				end
+			elseif self._id == 104199 then
+				--rand = PickRandomFromList(rand, "_escape003")	
 				if _tmp_data[_level_id].escape == 3 then
-					rand = 1		
+					rand = 2			
+				end
+			
+			elseif self._id == 104227 then
+				--rand = PickRandomFromList(rand, "_escape002_path2")
+				if _tmp_data[_level_id].escape == 3 then
+					rand = 1			
 				end
 			end
 		
@@ -4293,9 +4313,9 @@ function ElementRandom:_get_random_elements()
 				rand = GetIndexFromChoice(PickRandomFromList(rand,"_fridge"))			
 			elseif self._id == 100313 then
 				rand = GetIndexFromChoice(PickRandomFromList(rand,"_aqua"))				
-			elseif self._id == 100980 then
+			--[[elseif self._id == 100980 then
 				rand = GetIndexFromChoice(PickRandomFromList(rand,"_server_rack"))			
-			--[[elseif self._id == 143273 then
+			elseif self._id == 143273 then
 				rand = PickRandomFromList(rand,"_button4")
 			elseif self._id == 145073 then
 				rand = PickRandomFromList(rand,"_button3")
