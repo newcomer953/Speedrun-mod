@@ -6,11 +6,20 @@ local _Current_Heist = "welcome_to_the_jungle_2"
 RNGModifier._data = RNGModifier._data or {}
 RNGModifier._data[_Current_Heist] = RNGModifier._data[_Current_Heist] or {}
 
+local _priority = -1
+
+function GetPriority()
+	local current_priority = _priority
+	_priority = _priority - 1
+	return current_priority
+end
+
 MenuCallbackHandler.RNGModifier_welcome_to_the_jungle_2_server = function(self, item)
 	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_server")
 	RNGModifier:Save()
 end
 MenuHelper:AddMultipleChoice({
+	priority = GetPriority(),
 	id = "RNGModifier_welcome_to_the_jungle_2_server",
 	title = "RNGModifier_welcome_to_the_jungle_2_server_title",
 	desc = "RNGModifier_empty_desc",
@@ -29,6 +38,7 @@ MenuCallbackHandler.RNGModifier_welcome_to_the_jungle_2_plane = function(self, i
 	RNGModifier:Save()
 end
 MenuHelper:AddMultipleChoice({
+	priority = GetPriority(),
 	id = "RNGModifier_welcome_to_the_jungle_2_plane",
 	title = "RNGModifier_welcome_to_the_jungle_2_plane_title",
 	desc = "RNGModifier_empty_desc",
@@ -49,6 +59,7 @@ MenuCallbackHandler.RNGModifier_welcome_to_the_jungle_2_engine = function(self, 
 	RNGModifier:Save()
 end
 MenuHelper:AddMultipleChoice({
+	priority = GetPriority(),
 	id = "RNGModifier_welcome_to_the_jungle_2_engine",
 	title = "RNGModifier_welcome_to_the_jungle_2_engine_title",
 	desc = "RNGModifier_empty_desc",
@@ -69,7 +80,7 @@ MenuHelper:AddMultipleChoice({
 	menu_id = "RNGModifier_welcome_to_the_jungle_2_Options_Menu"
 })
 
-MenuCallbackHandler.RNGModifier_welcome_to_the_jungle_2_pickup = function(self, item)
+--[[MenuCallbackHandler.RNGModifier_welcome_to_the_jungle_2_pickup = function(self, item)
 	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_pickup")
 	RNGModifier:Save()
 end
@@ -87,13 +98,14 @@ MenuHelper:AddMultipleChoice({
 	},
 	value = RNGModifier:SafeGetData(_Current_Heist, "_pickup"),
 	menu_id = "RNGModifier_welcome_to_the_jungle_2_Options_Menu"
-})
+})]]
 
 MenuCallbackHandler.RNGModifier_welcome_to_the_jungle_2_flare = function(self, item)
 	RNGModifier:SafeSetData(item:value(), _Current_Heist, "_flare")
 	RNGModifier:Save()
 end
 MenuHelper:AddMultipleChoice({
+	priority = GetPriority(),
 	id = "RNGModifier_welcome_to_the_jungle_2_flare",
 	title = "RNGModifier_welcome_to_the_jungle_2_flare_title",
 	desc = "RNGModifier_welcome_to_the_jungle_2_flare_desc",
@@ -107,4 +119,21 @@ MenuHelper:AddMultipleChoice({
 	menu_id = "RNGModifier_welcome_to_the_jungle_2_Options_Menu"
 })
 
+MenuCallbackHandler.RNGModifier_welcome_to_the_jungle_2_pickup = function(self, item)
+	if tostring(item:value()) == "on" then
+		RNGModifier:SafeSetData(1, _Current_Heist, "_pickup")
+	else
+		RNGModifier:SafeSetData(0, _Current_Heist, "_pickup")
+	end
+	RNGModifier:Save()
+end
+MenuHelper:AddToggle({
+	priority = GetPriority(),
+	id = "RNGModifier_welcome_to_the_jungle_2_pickup",
+	title = "RNGModifier_welcome_to_the_jungle_2_pickup_title",
+	desc = "RNGModifier_empty_desc",
+	callback = "RNGModifier_welcome_to_the_jungle_2_pickup",
+	value = tonumber(RNGModifier:SafeGetData(_Current_Heist, "_pickup")) == 1,
+	menu_id = "RNGModifier_" .. _Current_Heist .. "_Options_Menu"
+})
 

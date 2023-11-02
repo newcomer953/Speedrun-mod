@@ -3506,8 +3506,10 @@ function ElementRandom:_get_random_elements()
 				rand = PickRandomFromList(rand, "_server")
 			elseif self._id == 103838 then
 				rand = PickRandomFromList(rand, "_plane")
-			elseif self._id == 100349 then
-				rand = PickRandomFromList(rand, "_pickup")
+			elseif self._id == 100349 or self._id == 103318 then
+				--rand = PickRandomFromList(rand, "_pickup")
+				local _pickup = GetCheckboxValue(_level_id, "_pickup")
+				if _pickup then rand = 1 end
 			elseif self._id == 104426 then
 				rand = PickRandomFromList(rand, "_flare")
 			end		

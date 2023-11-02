@@ -135,7 +135,7 @@ function ElementLogicChance:on_executed(...)
 			elseif self._id == 103452 then
 				local _correct_paper = GetCheckboxValue(_level_id, "_nopower")
 				if _correct_paper then 
-					self._chance = 999
+					self._chance = -999
 				end
 			elseif self._id == 103582 then
 				local _escape = GetMultipleChoiceValue(_level_id, "_escape")
