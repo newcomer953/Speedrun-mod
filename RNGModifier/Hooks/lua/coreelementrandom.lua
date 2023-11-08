@@ -197,7 +197,7 @@ function ElementRandom:_get_random_elements()
 				end
 				_truck_spawn = _truck_spawn - 1
 				rand = _truck_spawn]]
-				rand = PickRandomFromList(rand,"_truck_spawn")
+				rand = GetIndexFromChoice(PickRandomFromList(rand,"_rand_truck_amount"))
 			elseif self._id == 100126 then
 				rand = PickRandomFromList(rand,"_esc")
 			elseif self._id == 101631 then
@@ -211,13 +211,7 @@ function ElementRandom:_get_random_elements()
 			
 		elseif _level_id == "arm_par" then
 			if self._id == 100028 then
-				--[[local _truck_spawn = RNGModifier:SafeGetData(_level_id, "_rand_truck_amount") or 0
-				if _truck_spawn > 2 then
-					_truck_spawn = _truck_spawn + 2 
-				end
-				_truck_spawn = _truck_spawn - 1
-				rand = _truck_spawn]]
-				rand = PickRandomFromList(rand,"_truck_spawn")
+				rand = GetIndexFromChoice(PickRandomFromList(rand,"_rand_truck_amount"))
 			elseif self._id == 100126 then
 				rand = PickRandomFromList(rand,"_esc")
 			elseif self._id == 100110 then
@@ -237,7 +231,7 @@ function ElementRandom:_get_random_elements()
 				end
 				_truck_spawn = _truck_spawn - 1
 				rand = _truck_spawn]]
-				rand = PickRandomFromList(rand,"_truck_spawn")
+				rand = GetIndexFromChoice(PickRandomFromList(rand,"_rand_truck_amount"))
 			elseif self._id == 100453 then
 				rand = PickRandomFromList(rand,"_loot")
 			elseif self._id == 100126 then
@@ -255,7 +249,7 @@ function ElementRandom:_get_random_elements()
 				end
 				_truck_spawn = _truck_spawn - 1
 				rand = _truck_spawn]]
-				rand = PickRandomFromList(rand,"_truck_spawn")
+				rand = GetIndexFromChoice(PickRandomFromList(rand,"_rand_truck_amount"))
 			elseif self._id == 100126 then
 				rand = PickRandomFromList(rand,"_esc")
 			elseif self._id == 100229 then
@@ -275,7 +269,7 @@ function ElementRandom:_get_random_elements()
 				end
 				_truck_spawn = _truck_spawn - 1
 				rand = _truck_spawn]]
-				rand = PickRandomFromList(rand,"_truck_spawn")
+				rand = GetIndexFromChoice(PickRandomFromList(rand,"_rand_truck_amount"))
 			elseif self._id == 100126 then
 				rand = PickRandomFromList(rand,"_esc")
 			elseif self._id == 100229 then

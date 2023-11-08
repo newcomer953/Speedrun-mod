@@ -13,7 +13,7 @@ end
 MenuHelper:AddMultipleChoice({
 	id = "RNGModifier_arm_fac_rand_truck_amount",
 	title = "RNGModifier_arm_rand_truck_amount_title",
-	desc = "RNGModifier_empty_desc",
+	desc = "RNGModifier_arm_rand_truck_amount_desc",
 	callback = "RNGModifier_arm_fac_rand_truck_amount",
 	items = {
 		"RNGModifier_Default_One_Item",

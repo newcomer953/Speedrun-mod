@@ -123,6 +123,7 @@
 	"RNGModifier_roberts_cop_title": "SPAWN COP",
 	
 	"RNGModifier_arm_rand_truck_amount_title" : "How many trucks?",
+	"RNGModifier_arm_rand_truck_amount_desc": "THE NUMBER OF TRUCKS SPAWNED ARE ALSO BASED ON WHERE YOU SPAWN FOR SOME HEIST",
 	"RNGModifier_arm_rand_test_title": "Test",
 	"RNGModifier_arm_esc_title":"Escape",
 	"RNGModifier_arm_spawn_title": "Spawn",
