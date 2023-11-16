@@ -21,6 +21,6 @@
 		</group>
 		
 		<post hook_id="lib/states/ingamewaitingforplayers" script_path="auto_skip_intro.lua"/>	
-		<!--<tweak definition="" /> -->
+		<tweak definition="anim_tweak.xml" />
 	</hooks>
 </mod>
